@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andy/opencv_projects/GrayScale/src/main.cpp
+opencv/cv.h
+/home/andy/opencv_projects/GrayScale/src/opencv/cv.h
+opencv/highgui.h
+/home/andy/opencv_projects/GrayScale/src/opencv/highgui.h
+

@@ -1,0 +1,1 @@
+/home/andy/opencv_projects/cs378-cv/FeatureDetection/build/CMakeFiles/FeatureDetection.dir
