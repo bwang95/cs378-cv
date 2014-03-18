@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/andy/opencv_projects/cs378-cv/FeatureDetection/src/main.cpp" "/home/andy/opencv_projects/cs378-cv/FeatureDetection/build/CMakeFiles/FeatureDetection.dir/main.cpp.o"
+  "/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/FeatureDetection/src/main.cpp" "/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/FeatureDetection/build/CMakeFiles/FeatureDetection.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

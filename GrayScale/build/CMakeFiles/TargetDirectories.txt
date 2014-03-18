@@ -1,1 +1,1 @@
-/home/andy/opencv_projects/GrayScale/build/CMakeFiles/GrayScale.dir
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles/GrayScale.dir

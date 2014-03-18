@@ -31,14 +31,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andy/opencv_projects/GrayScale/src
+CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andy/opencv_projects/GrayScale/build
+CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GrayScale.dir/depend.make
@@ -50,18 +47,18 @@ include CMakeFiles/GrayScale.dir/progress.make
 include CMakeFiles/GrayScale.dir/flags.make
 
 CMakeFiles/GrayScale.dir/main.cpp.o: CMakeFiles/GrayScale.dir/flags.make
-CMakeFiles/GrayScale.dir/main.cpp.o: /home/andy/opencv_projects/GrayScale/src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/GrayScale/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/GrayScale.dir/main.cpp.o: /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/GrayScale.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/GrayScale.dir/main.cpp.o -c /home/andy/opencv_projects/GrayScale/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/GrayScale.dir/main.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/main.cpp
 
 CMakeFiles/GrayScale.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GrayScale.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/GrayScale/src/main.cpp > CMakeFiles/GrayScale.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/main.cpp > CMakeFiles/GrayScale.dir/main.cpp.i
 
 CMakeFiles/GrayScale.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GrayScale.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/GrayScale/src/main.cpp -o CMakeFiles/GrayScale.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/main.cpp -o CMakeFiles/GrayScale.dir/main.cpp.s
 
 CMakeFiles/GrayScale.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/GrayScale.dir/main.cpp.o.requires
@@ -115,6 +112,6 @@ CMakeFiles/GrayScale.dir/clean:
 .PHONY : CMakeFiles/GrayScale.dir/clean
 
 CMakeFiles/GrayScale.dir/depend:
-	cd /home/andy/opencv_projects/GrayScale/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andy/opencv_projects/GrayScale/src /home/andy/opencv_projects/GrayScale/src /home/andy/opencv_projects/GrayScale/build /home/andy/opencv_projects/GrayScale/build /home/andy/opencv_projects/GrayScale/build/CMakeFiles/GrayScale.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles/GrayScale.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GrayScale.dir/depend
 

@@ -10,7 +10,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
-  "/home/andy/opencv_projects/GrayScale/src/CMakeLists.txt"
+  "/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/CMakeLists.txt"
   "/opt/ros/hydro/share/OpenCV/OpenCVConfig-version.cmake"
   "/opt/ros/hydro/share/OpenCV/OpenCVConfig.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCCompiler.cmake.in"

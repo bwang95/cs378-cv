@@ -43,14 +43,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andy/opencv_projects/GrayScale/src
+CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/andy/opencv_projects/GrayScale/build
+CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/GrayScale.dir
@@ -59,7 +56,7 @@ CMAKE_BINARY_DIR = /home/andy/opencv_projects/GrayScale/build
 CMakeFiles/GrayScale.dir/all:
 	$(MAKE) -f CMakeFiles/GrayScale.dir/build.make CMakeFiles/GrayScale.dir/depend
 	$(MAKE) -f CMakeFiles/GrayScale.dir/build.make CMakeFiles/GrayScale.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/GrayScale/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles  1
 	@echo "Built target GrayScale"
 .PHONY : CMakeFiles/GrayScale.dir/all
 
@@ -69,9 +66,9 @@ all: CMakeFiles/GrayScale.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GrayScale.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andy/opencv_projects/GrayScale/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GrayScale.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andy/opencv_projects/GrayScale/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/build/CMakeFiles 0
 .PHONY : CMakeFiles/GrayScale.dir/rule
 
 # Convenience name for target.

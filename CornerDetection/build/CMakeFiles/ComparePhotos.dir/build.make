@@ -31,17 +31,11 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src
+CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build
+CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ComparePhotos.dir/depend.make
@@ -53,18 +47,18 @@ include CMakeFiles/ComparePhotos.dir/progress.make
 include CMakeFiles/ComparePhotos.dir/flags.make
 
 CMakeFiles/ComparePhotos.dir/main.cpp.o: CMakeFiles/ComparePhotos.dir/flags.make
-CMakeFiles/ComparePhotos.dir/main.cpp.o: /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/ComparePhotos.dir/main.cpp.o: /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ComparePhotos.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ComparePhotos.dir/main.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ComparePhotos.dir/main.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src/main.cpp
 
 CMakeFiles/ComparePhotos.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ComparePhotos.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src/main.cpp > CMakeFiles/ComparePhotos.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src/main.cpp > CMakeFiles/ComparePhotos.dir/main.cpp.i
 
 CMakeFiles/ComparePhotos.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ComparePhotos.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src/main.cpp -o CMakeFiles/ComparePhotos.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src/main.cpp -o CMakeFiles/ComparePhotos.dir/main.cpp.s
 
 CMakeFiles/ComparePhotos.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/ComparePhotos.dir/main.cpp.o.requires
@@ -83,7 +77,6 @@ ComparePhotos_OBJECTS = \
 ComparePhotos_EXTERNAL_OBJECTS =
 
 ComparePhotos: CMakeFiles/ComparePhotos.dir/main.cpp.o
-ComparePhotos: CMakeFiles/ComparePhotos.dir/build.make
 ComparePhotos: /opt/ros/hydro/lib/libopencv_calib3d.so
 ComparePhotos: /opt/ros/hydro/lib/libopencv_contrib.so
 ComparePhotos: /opt/ros/hydro/lib/libopencv_core.so
@@ -102,6 +95,7 @@ ComparePhotos: /opt/ros/hydro/lib/libopencv_superres.so
 ComparePhotos: /opt/ros/hydro/lib/libopencv_ts.so
 ComparePhotos: /opt/ros/hydro/lib/libopencv_video.so
 ComparePhotos: /opt/ros/hydro/lib/libopencv_videostab.so
+ComparePhotos: CMakeFiles/ComparePhotos.dir/build.make
 ComparePhotos: CMakeFiles/ComparePhotos.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ComparePhotos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ComparePhotos.dir/link.txt --verbose=$(VERBOSE)
@@ -118,6 +112,6 @@ CMakeFiles/ComparePhotos.dir/clean:
 .PHONY : CMakeFiles/ComparePhotos.dir/clean
 
 CMakeFiles/ComparePhotos.dir/depend:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/ComparePhotos/build/CMakeFiles/ComparePhotos.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/src /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build/CMakeFiles/ComparePhotos.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ComparePhotos.dir/depend
 

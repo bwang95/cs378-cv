@@ -31,12 +31,6 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Display/src
 
@@ -83,7 +77,6 @@ DisplayImage_OBJECTS = \
 DisplayImage_EXTERNAL_OBJECTS =
 
 DisplayImage: CMakeFiles/DisplayImage.dir/display.cpp.o
-DisplayImage: CMakeFiles/DisplayImage.dir/build.make
 DisplayImage: /opt/ros/hydro/lib/libopencv_calib3d.so
 DisplayImage: /opt/ros/hydro/lib/libopencv_contrib.so
 DisplayImage: /opt/ros/hydro/lib/libopencv_core.so
@@ -102,6 +95,7 @@ DisplayImage: /opt/ros/hydro/lib/libopencv_superres.so
 DisplayImage: /opt/ros/hydro/lib/libopencv_ts.so
 DisplayImage: /opt/ros/hydro/lib/libopencv_video.so
 DisplayImage: /opt/ros/hydro/lib/libopencv_videostab.so
+DisplayImage: CMakeFiles/DisplayImage.dir/build.make
 DisplayImage: CMakeFiles/DisplayImage.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable DisplayImage"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DisplayImage.dir/link.txt --verbose=$(VERBOSE)

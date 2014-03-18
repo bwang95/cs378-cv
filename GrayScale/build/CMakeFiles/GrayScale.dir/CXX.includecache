@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/andy/opencv_projects/GrayScale/src/main.cpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/main.cpp
 opencv/cv.h
-/home/andy/opencv_projects/GrayScale/src/opencv/cv.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/opencv/cv.h
 opencv/highgui.h
-/home/andy/opencv_projects/GrayScale/src/opencv/highgui.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/GrayScale/src/opencv/highgui.h
 
