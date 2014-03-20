@@ -1,27 +1,27 @@
+
+function clean(){
+	rm -rf build
+}
+function newDir(){
+	mkdir build
+	cd build
+}
+function compile(){
+	cmake ../src
+	make -j8
+}
+function remake(){
+	clean
+	newDir
+	compile
+}
+
 cd CornerDetection
-rm -rf build
-mkdir build
-cd build
-cmake ../src
-make -j8
-
+remake
 cd ../../Display
-rm -rf build
-mkdir build
-cd build
-cmake ../src
-make -j8
-
+remake
 cd ../../FeatureDetection
-rm -rf build
-mkdir build
-cd build
-cmake ../src
-make -j8
-
+remake
 cd ../../GrayScale
-rm -rf build
-mkdir build
-cd build
-cmake ../src
-make -j8
+remake
+cd ../..
