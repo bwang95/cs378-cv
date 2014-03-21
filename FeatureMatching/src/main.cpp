@@ -115,4 +115,4 @@ int main( int argc, char** argv )
  * @function readme
  */
 void readme()
-{ std::cout << " Usage: ./SURF_FlannMatcher <img1> <img2>" << std::endl; }
+{ std::cout << " Usage: ./SURF_FlannMatcher <img1> <img2> <reduce picture by 2^x>" << std::endl; }
