@@ -7,6 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Display/src/display.cpp
+opencv2/imgproc/imgproc.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Display/src/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Display/src/opencv2/highgui/highgui.hpp
+math.h
+-
+stdlib.h
+-
 stdio.h
 -
 opencv2/opencv.hpp

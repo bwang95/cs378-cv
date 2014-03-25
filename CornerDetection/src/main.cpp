@@ -27,8 +27,8 @@ void goodFeaturesToTrack_Demo( int, void *) {
 
 	/// Parameters for Shi-Tomasi algorithm
 	vector<Point2f> corners;
-	double qualityLevel = 0.5;
-	double minDistance = 10;
+	double qualityLevel = 0.1;
+	double minDistance = 50;
 	int blockSize = 3;
 	bool useHarrisDetector = false;
 	double k = 0.04;
