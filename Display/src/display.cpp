@@ -1,7 +1,12 @@
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include <math.h>
+#include <stdlib.h>
 #include<stdio.h>
 #include<opencv2/opencv.hpp>
 
 using namespace cv;
+Mat tmp,dst;
 
 int main(int argc, char **argv) {
 	Mat image;
