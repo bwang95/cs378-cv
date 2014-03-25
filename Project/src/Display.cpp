@@ -1,5 +1,6 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include "lib/Display.h"
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,7 +9,7 @@
 using namespace cv;
 Mat tmp,dst;
 
-int main(int argc, char **argv) {
+int newWindow(int argc, char **argv) {
 	Mat image;
 	image = imread(argv[1], 1);
 	if (argc != 2 || !image.data) {

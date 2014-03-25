@@ -14,24 +14,24 @@ Mat src, src_gray;
 int maxCorners = 23;
 int maxTrackbar = 100;
 
-RNG rng(12345);
+// RNG rng(12345);
 char *source_window = "Image";
 
 /**
  * @function goodFeaturesToTrack_Demo.cpp
  * @brief Apply Shi-Tomasi corner detector
  */
-int detectCorners( int, void *) {
+int detectCorners(double qualityLevel = 0.1, double minDistance = 50, int blockSize = 3, bool useHarrisDetector = false, double k = 0.04) {
 	if ( maxCorners < 1 )
 		maxCorners = 1;
 
 	/// Parameters for Shi-Tomasi algorithm
 	vector<Point2f> corners;
-	double qualityLevel = 0.1;
-	double minDistance = 50;
-	int blockSize = 3;
-	bool useHarrisDetector = false;
-	double k = 0.04;
+	// double qualityLevel = 0.1;
+	// double minDistance = 50;
+	// int blockSize = 3;
+	// bool useHarrisDetector = false;
+	// double k = 0.04;
 
 	/// Copy the source image
 	Mat copy;

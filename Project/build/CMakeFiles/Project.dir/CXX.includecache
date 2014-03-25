@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp
+All.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/All.h
+

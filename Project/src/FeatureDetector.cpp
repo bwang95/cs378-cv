@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <iostream>
 #include "lib/FeatureDetector.h"
@@ -9,10 +10,8 @@
 
 using namespace cv;
 
-void readme();
-
 /** @function main */
-int main( int argc, char **argv ) {
+int detectCommonFeatures( int argc, char **argv ) {
 	if ( argc != 3 ) {
 		readme();
 		return -1;
@@ -43,10 +42,10 @@ int main( int argc, char **argv ) {
 	drawKeypoints( img_2, keypoints_2, img_keypoints_2, Scalar::all(-1), DrawMatchesFlags::DEFAULT );
 
 	//-- Show detected (drawn) keypoints
-	imshow("Keypoints 1", img_keypoints_1 );
-	imshow("Keypoints 2", img_keypoints_2 );
+	// imshow("Keypoints 1", img_keypoints_1 );
+	// imshow("Keypoints 2", img_keypoints_2 );
 
-	waitKey(0);
+	// waitKey(0);
 
 	return 0;
 }
@@ -55,4 +54,3 @@ int main( int argc, char **argv ) {
 void readme() {
 	std::cout << " Usage: ./SURF_detector <img1> <img2>" << std::endl;
 }
-

@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "lib/FeatureMatcher.h"
 #include "opencv2/imgproc/imgproc.hpp"
 #include <iostream>
 #include "opencv2/core/core.hpp"
@@ -16,14 +17,13 @@
 
 using namespace cv;
 
-void readme();
 Mat tmp, tmp2, img_1, img_2;
 
 /**
  * @function main
  * @brief Main function
  */
-int main( int argc, char **argv ) {
+int matchFeatures( int argc, char **argv ) {
 	if ( argc != 4 ) {
 		readme();
 		return -1;
@@ -104,13 +104,13 @@ int main( int argc, char **argv ) {
 	             vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 
 	//-- Show detected matches
-	imshow( "Good Matches", img_matches );
+	// imshow( "Good Matches", img_matches );
 
 	for ( int i = 0; i < (int)good_matches.size(); i++ ) {
 		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
 	}
 
-	waitKey(0);
+	// waitKey(0);
 
 	return 0;
 }
