@@ -6,7 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/All.h
+CornerDetector.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+Display.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+FeatureDetector.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureDetector.h
+FeatureMatcher.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureDetector.h
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
+
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp
-All.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/All.h
+lib/All.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/All.h
 
