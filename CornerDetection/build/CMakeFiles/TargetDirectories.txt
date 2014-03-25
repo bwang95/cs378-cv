@@ -1,1 +1,0 @@
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/CornerDetection/build/CMakeFiles/ComparePhotos.dir
