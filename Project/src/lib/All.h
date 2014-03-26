@@ -3,7 +3,6 @@
 
 #include "CornerDetector.h"
 #include "Display.h"
-#include "FeatureDetector.h"
 #include "FeatureMatcher.h"
 #include "FeatureMatcherData.h"
 

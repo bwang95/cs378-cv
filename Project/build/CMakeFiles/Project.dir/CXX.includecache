@@ -57,8 +57,6 @@ CornerDetector.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
 Display.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
-FeatureDetector.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureDetector.h
 FeatureMatcher.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
 FeatureMatcherData.h
@@ -67,26 +65,6 @@ FeatureMatcherData.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
 
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
-
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureDetector.h
-stdio.h
--
-stdlib.h
--
-math.h
--
-opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/imgproc/imgproc.hpp
-iostream
--
-opencv2/core/core.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/core/core.hpp
-opencv2/features2d/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/features2d/features2d.hpp
-opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/highgui/highgui.hpp
-opencv2/nonfree/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/nonfree/features2d.hpp
 
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
 FeatureMatcherData.h

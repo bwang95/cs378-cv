@@ -7,18 +7,13 @@
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
-Mat tmp,dst;
 
-int newWindow(int argc, char **argv) {
-	Mat image;
-	image = imread(argv[1], 1);
-	if (argc != 2 || !image.data) {
-		printf("No image data \n");
-		return -1;
+void newWindow(char *img) {
+	Mat image = imread(img, 1);
+	if (!image.data) {
+		cout << "Error reading image!" << endl;
+		return;
 	}
 	namedWindow("Display Image", CV_WINDOW_AUTOSIZE);
 	imshow("Display Image", image);
-
-	waitKey(0);
-	return 0;
 }

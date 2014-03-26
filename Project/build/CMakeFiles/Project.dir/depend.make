@@ -11,7 +11,6 @@ CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o: ../src/lib/FeatureMatcherDa
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/All.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/CornerDetector.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/Display.h
-CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/FeatureDetector.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/FeatureMatcher.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/FeatureMatcherData.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/main.cpp
