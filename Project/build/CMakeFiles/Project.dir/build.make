@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project
+CMAKE_SOURCE_DIR = /home/andy/opencv_projects/cs378-cv/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build
+CMAKE_BINARY_DIR = /home/andy/opencv_projects/cs378-cv/Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project.dir/depend.make
@@ -48,17 +48,17 @@ include CMakeFiles/Project.dir/flags.make
 
 CMakeFiles/Project.dir/src/main.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/main.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/main.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/main.cpp
 
 CMakeFiles/Project.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp > CMakeFiles/Project.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/main.cpp > CMakeFiles/Project.dir/src/main.cpp.i
 
 CMakeFiles/Project.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp -o CMakeFiles/Project.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/main.cpp -o CMakeFiles/Project.dir/src/main.cpp.s
 
 CMakeFiles/Project.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/Project.dir/src/main.cpp.o.requires
@@ -71,17 +71,17 @@ CMakeFiles/Project.dir/src/main.cpp.o.provides.build: CMakeFiles/Project.dir/src
 
 CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o: ../src/FeatureMatcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcher.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcher.cpp
 
 CMakeFiles/Project.dir/src/FeatureMatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/FeatureMatcher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcher.cpp > CMakeFiles/Project.dir/src/FeatureMatcher.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcher.cpp > CMakeFiles/Project.dir/src/FeatureMatcher.cpp.i
 
 CMakeFiles/Project.dir/src/FeatureMatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/FeatureMatcher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcher.cpp -o CMakeFiles/Project.dir/src/FeatureMatcher.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcher.cpp -o CMakeFiles/Project.dir/src/FeatureMatcher.cpp.s
 
 CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o.requires:
 .PHONY : CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o.requires
@@ -94,17 +94,17 @@ CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o.provides.build: CMakeFiles/Proje
 
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o: ../src/FeatureMatcherData.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcherData.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcherData.cpp
 
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcherData.cpp > CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcherData.cpp > CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.i
 
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcherData.cpp -o CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcherData.cpp -o CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.s
 
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.requires:
 .PHONY : CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.requires
@@ -117,17 +117,17 @@ CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.provides.build: CMakeFiles/P
 
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o: ../src/CornerDetector.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/CornerDetector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/CornerDetector.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/CornerDetector.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/CornerDetector.cpp
 
 CMakeFiles/Project.dir/src/CornerDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/CornerDetector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp > CMakeFiles/Project.dir/src/CornerDetector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/CornerDetector.cpp > CMakeFiles/Project.dir/src/CornerDetector.cpp.i
 
 CMakeFiles/Project.dir/src/CornerDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/CornerDetector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp -o CMakeFiles/Project.dir/src/CornerDetector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/CornerDetector.cpp -o CMakeFiles/Project.dir/src/CornerDetector.cpp.s
 
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires:
 .PHONY : CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires
@@ -140,17 +140,17 @@ CMakeFiles/Project.dir/src/CornerDetector.cpp.o.provides.build: CMakeFiles/Proje
 
 CMakeFiles/Project.dir/src/Display.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/Display.cpp.o: ../src/Display.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/Display.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/Display.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/Display.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp
 
 CMakeFiles/Project.dir/src/Display.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/Display.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp > CMakeFiles/Project.dir/src/Display.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp > CMakeFiles/Project.dir/src/Display.cpp.i
 
 CMakeFiles/Project.dir/src/Display.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Display.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp -o CMakeFiles/Project.dir/src/Display.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp -o CMakeFiles/Project.dir/src/Display.cpp.s
 
 CMakeFiles/Project.dir/src/Display.cpp.o.requires:
 .PHONY : CMakeFiles/Project.dir/src/Display.cpp.o.requires
@@ -216,6 +216,6 @@ CMakeFiles/Project.dir/clean:
 .PHONY : CMakeFiles/Project.dir/clean
 
 CMakeFiles/Project.dir/depend:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles/Project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andy/opencv_projects/cs378-cv/Project /home/andy/opencv_projects/cs378-cv/Project /home/andy/opencv_projects/cs378-cv/Project/build /home/andy/opencv_projects/cs378-cv/Project/build /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles/Project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Project.dir/depend
 

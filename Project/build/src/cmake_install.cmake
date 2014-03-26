@@ -1,4 +1,4 @@
-# Install script for directory: /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src
+# Install script for directory: /home/andy/opencv_projects/cs378-cv/Project/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

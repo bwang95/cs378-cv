@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project
+CMAKE_SOURCE_DIR = /home/andy/opencv_projects/cs378-cv/Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build
+CMAKE_BINARY_DIR = /home/andy/opencv_projects/cs378-cv/Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,14 +66,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/src/CMakeFiles/progress.marks
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles 0
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles /home/andy/opencv_projects/cs378-cv/Project/build/src/CMakeFiles/progress.marks
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -82,17 +82,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -114,6 +114,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/andy/opencv_projects/cs378-cv/Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

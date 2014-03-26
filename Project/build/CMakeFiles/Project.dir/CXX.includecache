@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp
+/home/andy/opencv_projects/cs378-cv/Project/src/CornerDetector.cpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
 lib/CornerDetector.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/CornerDetector.h
 iostream
 -
 stdio.h
@@ -20,13 +20,13 @@ stdio.h
 stdlib.h
 -
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp
+/home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
 lib/Display.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/Display.h
 math.h
 -
 stdlib.h
@@ -38,11 +38,11 @@ iostream
 opencv2/opencv.hpp
 -
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcher.cpp
+/home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcher.cpp
 lib/FeatureMatcher.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcher.h
 lib/FeatureMatcherData.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcherData.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
 stdio.h
 -
 stdlib.h
@@ -50,21 +50,21 @@ stdlib.h
 math.h
 -
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
 iostream
 -
 opencv2/core/core.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/core/core.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/features2d/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/features2d/features2d.hpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
 opencv2/nonfree/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/nonfree/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/nonfree/features2d.hpp
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcherData.cpp
+/home/andy/opencv_projects/cs378-cv/Project/src/FeatureMatcherData.cpp
 lib/FeatureMatcherData.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcherData.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
 stdio.h
 -
 stdlib.h
@@ -72,35 +72,35 @@ stdlib.h
 math.h
 -
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
 iostream
 -
 opencv2/core/core.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/core/core.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/features2d/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/features2d/features2d.hpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
 opencv2/nonfree/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/nonfree/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/opencv2/nonfree/features2d.hpp
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/All.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/All.h
 CornerDetector.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/CornerDetector.h
 Display.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/Display.h
 FeatureMatcher.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcher.h
 FeatureMatcherData.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcherData.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/CornerDetector.h
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/Display.h
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcher.h
 FeatureMatcherData.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcherData.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
 stdio.h
 -
 stdlib.h
@@ -108,19 +108,19 @@ stdlib.h
 math.h
 -
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/imgproc/imgproc.hpp
 iostream
 -
 opencv2/core/core.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/core/core.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/features2d/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/features2d/features2d.hpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/highgui/highgui.hpp
 opencv2/nonfree/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/nonfree/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/nonfree/features2d.hpp
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcherData.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
 stdio.h
 -
 stdlib.h
@@ -128,21 +128,21 @@ stdlib.h
 math.h
 -
 opencv2/imgproc/imgproc.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/imgproc/imgproc.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/imgproc/imgproc.hpp
 iostream
 -
 opencv2/core/core.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/core/core.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/features2d/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/features2d/features2d.hpp
 opencv2/highgui/highgui.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/highgui/highgui.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/highgui/highgui.hpp
 opencv2/nonfree/features2d.hpp
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/opencv2/nonfree/features2d.hpp
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/opencv2/nonfree/features2d.hpp
 
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp
+/home/andy/opencv_projects/cs378-cv/Project/src/main.cpp
 lib/All.h
-/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/All.h
+/home/andy/opencv_projects/cs378-cv/Project/src/lib/All.h
 iostream
 -
 
