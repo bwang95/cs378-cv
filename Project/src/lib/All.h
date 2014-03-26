@@ -5,6 +5,7 @@
 #include "Display.h"
 #include "FeatureDetector.h"
 #include "FeatureMatcher.h"
+#include "FeatureMatcherData.h"
 
 using namespace cv;
 using namespace std;

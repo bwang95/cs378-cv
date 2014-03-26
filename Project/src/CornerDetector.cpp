@@ -54,8 +54,8 @@ int detectCorners(double qualityLevel = 0.1, double minDistance = 50, int blockS
 	return corners.size();
 	// int r = 25;
 	// for ( int i = 0; i < corners.size(); i++ ) {
-	// 	circle( copy, corners[i], r, Scalar(rng.uniform(0, 255), rng.uniform(0, 255),
-	// 	                                    rng.uniform(0, 255)), -1, 8, 0 );
+	//  circle( copy, corners[i], r, Scalar(rng.uniform(0, 255), rng.uniform(0, 255),
+	//                                      rng.uniform(0, 255)), -1, 8, 0 );
 	// }
 
 	/// Show what you got

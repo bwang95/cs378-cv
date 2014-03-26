@@ -7,7 +7,7 @@ function newDir(){
 	cd build
 }
 function compile(){
-	cmake ../src
+	cmake ..
 	make -j8
 }
 function remake(){

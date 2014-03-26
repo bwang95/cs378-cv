@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/Project.dir/main.cpp.o"
+  "CMakeFiles/Project.dir/src/main.cpp.o"
+  "CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o"
+  "CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o"
   "Project.pdb"
   "Project"
 )

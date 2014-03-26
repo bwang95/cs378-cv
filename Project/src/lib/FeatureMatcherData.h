@@ -11,49 +11,21 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/nonfree/features2d.hpp"
 
+using namespace cv;
+using namespace std;
 
 class FeatureMatcherData {
 public:
-	Mat *img, *descriptors;
-	vector<KeyPoint> *keypoints;
+	Mat img, descriptors;
+	vector<KeyPoint> keypoints;
 
-	FeatureMatcherData(){}
-
-	FeatureMatcherData(Mat *img, Mat *descriptors, vector<KeyPoint> *keypoints) {
-		this -> img = img;
-		this -> descriptors = descriptors;
-		this -> keypoints = keypoints;
-	}
-	~FeatureMatcherData() {
-		delete img;
-		delete descriptors;
-		delete keypoints;
-	}
-
-	void downsize(int downSize) {
-		Mat tmp = *img;
-		for (int i = 0; i < downSize; i++) {
-			pyrDown(tmp, *img, Size(tmp.cols / 2, tmp.rows / 2));
-			tmp = *img;
-		}
-	}
-
-	void calcKeyPoints() {
-		int minHessian = 400;
-		SurfFeatureDetector detector( minHessian );
-		detector.detect( *img, *keypoints );
-	}
-
-	void calcDescriptors() {
-		SurfDescriptorExtractor extractor;
-		extractor.compute( *img, *keypoints, *descriptors );
-	}
-
-	void run(int downSize = 3) {
-		downsize(downSize);
-		calcKeyPoints();
-		calcDescriptors();
-	}
+	FeatureMatcherData() {}
+	FeatureMatcherData(Mat img);
+	~FeatureMatcherData();
+	void downsize(int downSize);
+	void calcKeyPoints();
+	void calcDescriptors();
+	void run(int downSize = 3);
 };
 
 #endif
