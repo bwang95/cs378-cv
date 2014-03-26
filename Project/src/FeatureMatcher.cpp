@@ -20,6 +20,7 @@ FeatureMatcher::FeatureMatcher(char *img1, char *img2) {
 		std::cout << " --(!) Error reading images " << std::endl;
 		return;
 	}
+	downsize = -1;
 
 	data_1 = *new FeatureMatcherData(img_1);
 	data_2 = *new FeatureMatcherData(img_2);
