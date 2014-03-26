@@ -4,6 +4,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o"
   "CMakeFiles/Project.dir/src/CornerDetector.cpp.o"
   "CMakeFiles/Project.dir/src/Display.cpp.o"
+  "CMakeFiles/Project.dir/src/Directory.cpp.o"
   "Project.pdb"
   "Project"
 )

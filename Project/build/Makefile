@@ -132,6 +132,30 @@ src/CornerDetector.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/CornerDetector.cpp.s
 .PHONY : src/CornerDetector.cpp.s
 
+src/Directory.o: src/Directory.cpp.o
+.PHONY : src/Directory.o
+
+# target to build an object file
+src/Directory.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Directory.cpp.o
+.PHONY : src/Directory.cpp.o
+
+src/Directory.i: src/Directory.cpp.i
+.PHONY : src/Directory.i
+
+# target to preprocess a source file
+src/Directory.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Directory.cpp.i
+.PHONY : src/Directory.cpp.i
+
+src/Directory.s: src/Directory.cpp.s
+.PHONY : src/Directory.s
+
+# target to generate assembly for a file
+src/Directory.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Directory.cpp.s
+.PHONY : src/Directory.cpp.s
+
 src/Display.o: src/Display.cpp.o
 .PHONY : src/Display.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/CornerDetector.o"
 	@echo "... src/CornerDetector.i"
 	@echo "... src/CornerDetector.s"
+	@echo "... src/Directory.o"
+	@echo "... src/Directory.i"
+	@echo "... src/Directory.s"
 	@echo "... src/Display.o"
 	@echo "... src/Display.i"
 	@echo "... src/Display.s"

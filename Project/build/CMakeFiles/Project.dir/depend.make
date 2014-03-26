@@ -4,6 +4,9 @@
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o: ../src/CornerDetector.cpp
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o: ../src/lib/CornerDetector.h
 
+CMakeFiles/Project.dir/src/Directory.cpp.o: ../src/Directory.cpp
+CMakeFiles/Project.dir/src/Directory.cpp.o: ../src/lib/Directory.h
+
 CMakeFiles/Project.dir/src/Display.cpp.o: ../src/Display.cpp
 CMakeFiles/Project.dir/src/Display.cpp.o: ../src/lib/Display.h
 
@@ -16,6 +19,7 @@ CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o: ../src/lib/FeatureMatcherDa
 
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/All.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/CornerDetector.h
+CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/Directory.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/Display.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/FeatureMatcher.h
 CMakeFiles/Project.dir/src/main.cpp.o: ../src/lib/FeatureMatcherData.h

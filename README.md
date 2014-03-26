@@ -1,4 +1,3 @@
-cs378-cv
-========
+Project CS378
 
-Class project for 378. Computer Vision and Such
+Computer vision and such

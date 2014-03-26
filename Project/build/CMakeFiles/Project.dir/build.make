@@ -161,13 +161,37 @@ CMakeFiles/Project.dir/src/Display.cpp.o.provides: CMakeFiles/Project.dir/src/Di
 
 CMakeFiles/Project.dir/src/Display.cpp.o.provides.build: CMakeFiles/Project.dir/src/Display.cpp.o
 
+CMakeFiles/Project.dir/src/Directory.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/Directory.cpp.o: ../src/Directory.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/andy/opencv_projects/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/Directory.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/Directory.cpp.o -c /home/andy/opencv_projects/cs378-cv/Project/src/Directory.cpp
+
+CMakeFiles/Project.dir/src/Directory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/Directory.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/andy/opencv_projects/cs378-cv/Project/src/Directory.cpp > CMakeFiles/Project.dir/src/Directory.cpp.i
+
+CMakeFiles/Project.dir/src/Directory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Directory.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/andy/opencv_projects/cs378-cv/Project/src/Directory.cpp -o CMakeFiles/Project.dir/src/Directory.cpp.s
+
+CMakeFiles/Project.dir/src/Directory.cpp.o.requires:
+.PHONY : CMakeFiles/Project.dir/src/Directory.cpp.o.requires
+
+CMakeFiles/Project.dir/src/Directory.cpp.o.provides: CMakeFiles/Project.dir/src/Directory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Directory.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/src/Directory.cpp.o.provides
+
+CMakeFiles/Project.dir/src/Directory.cpp.o.provides.build: CMakeFiles/Project.dir/src/Directory.cpp.o
+
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/src/main.cpp.o" \
 "CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o" \
 "CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o" \
 "CMakeFiles/Project.dir/src/CornerDetector.cpp.o" \
-"CMakeFiles/Project.dir/src/Display.cpp.o"
+"CMakeFiles/Project.dir/src/Display.cpp.o" \
+"CMakeFiles/Project.dir/src/Directory.cpp.o"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
@@ -177,6 +201,7 @@ Project: CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o
 Project: CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o
 Project: CMakeFiles/Project.dir/src/CornerDetector.cpp.o
 Project: CMakeFiles/Project.dir/src/Display.cpp.o
+Project: CMakeFiles/Project.dir/src/Directory.cpp.o
 Project: /opt/ros/hydro/lib/libopencv_calib3d.so
 Project: /opt/ros/hydro/lib/libopencv_contrib.so
 Project: /opt/ros/hydro/lib/libopencv_core.so
@@ -209,6 +234,7 @@ CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/Display.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/Directory.cpp.o.requires
 .PHONY : CMakeFiles/Project.dir/requires
 
 CMakeFiles/Project.dir/clean:

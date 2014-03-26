@@ -4,6 +4,9 @@
 CMakeFiles/Project.dir/src/CornerDetector.cpp.o
  /home/andy/opencv_projects/cs378-cv/Project/src/CornerDetector.cpp
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/CornerDetector.h
+CMakeFiles/Project.dir/src/Directory.cpp.o
+ /home/andy/opencv_projects/cs378-cv/Project/src/Directory.cpp
+ /home/andy/opencv_projects/cs378-cv/Project/src/lib/Directory.h
 CMakeFiles/Project.dir/src/Display.cpp.o
  /home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/Display.h
@@ -17,6 +20,7 @@ CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o
 CMakeFiles/Project.dir/src/main.cpp.o
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/All.h
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/CornerDetector.h
+ /home/andy/opencv_projects/cs378-cv/Project/src/lib/Directory.h
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/Display.h
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcher.h
  /home/andy/opencv_projects/cs378-cv/Project/src/lib/FeatureMatcherData.h
