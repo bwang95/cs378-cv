@@ -6,4 +6,7 @@
 #include "FeatureDetector.h"
 #include "FeatureMatcher.h"
 
+using namespace cv;
+using namespace std;
+
 #endif //ALL_H
