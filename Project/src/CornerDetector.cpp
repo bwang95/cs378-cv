@@ -15,7 +15,7 @@ int maxCorners = 23;
 int maxTrackbar = 100;
 
 // RNG rng(12345);
-char *source_window = "Image";
+// char *source_window = "Image";
 
 /**
  * @function goodFeaturesToTrack_Demo.cpp

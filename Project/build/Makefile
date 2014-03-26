@@ -108,6 +108,54 @@ Project/fast:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
 
+src/CornerDetector.o: src/CornerDetector.cpp.o
+.PHONY : src/CornerDetector.o
+
+# target to build an object file
+src/CornerDetector.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/CornerDetector.cpp.o
+.PHONY : src/CornerDetector.cpp.o
+
+src/CornerDetector.i: src/CornerDetector.cpp.i
+.PHONY : src/CornerDetector.i
+
+# target to preprocess a source file
+src/CornerDetector.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/CornerDetector.cpp.i
+.PHONY : src/CornerDetector.cpp.i
+
+src/CornerDetector.s: src/CornerDetector.cpp.s
+.PHONY : src/CornerDetector.s
+
+# target to generate assembly for a file
+src/CornerDetector.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/CornerDetector.cpp.s
+.PHONY : src/CornerDetector.cpp.s
+
+src/Display.o: src/Display.cpp.o
+.PHONY : src/Display.o
+
+# target to build an object file
+src/Display.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Display.cpp.o
+.PHONY : src/Display.cpp.o
+
+src/Display.i: src/Display.cpp.i
+.PHONY : src/Display.i
+
+# target to preprocess a source file
+src/Display.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Display.cpp.i
+.PHONY : src/Display.cpp.i
+
+src/Display.s: src/Display.cpp.s
+.PHONY : src/Display.s
+
+# target to generate assembly for a file
+src/Display.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Display.cpp.s
+.PHONY : src/Display.cpp.s
+
 src/FeatureMatcher.o: src/FeatureMatcher.cpp.o
 .PHONY : src/FeatureMatcher.o
 
@@ -189,6 +237,12 @@ help:
 	@echo "... Project"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/CornerDetector.o"
+	@echo "... src/CornerDetector.i"
+	@echo "... src/CornerDetector.s"
+	@echo "... src/Display.o"
+	@echo "... src/Display.i"
+	@echo "... src/Display.s"
 	@echo "... src/FeatureMatcher.o"
 	@echo "... src/FeatureMatcher.i"
 	@echo "... src/FeatureMatcher.s"

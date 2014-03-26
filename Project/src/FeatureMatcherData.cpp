@@ -28,15 +28,12 @@ void FeatureMatcherData::downsize(int downSize) {
 		pyrDown(tmp, img, Size(tmp.cols / 2, tmp.rows / 2));
 		tmp = img;
 	}
-	cout << img.size().width << endl;
 }
 
 void FeatureMatcherData::calcKeyPoints() {
 	int minHessian = 400;
 	SurfFeatureDetector detector( minHessian );
 	detector.detect( img, keypoints );
-	cout << keypoints.size() << endl;
-	cout << (img).size().width << endl;
 }
 
 void FeatureMatcherData::calcDescriptors() {

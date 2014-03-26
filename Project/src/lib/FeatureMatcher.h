@@ -17,12 +17,14 @@ using namespace cv;
 
 class FeatureMatcher {
 	FeatureMatcherData data_1, data_2;
+	int downsize;
 public:
 	FeatureMatcher(char *img1, char *img2);
 	~FeatureMatcher();
 	int run();
 	vector<DMatch> matchFeatures();
 	void drawFeatures();
+	void setDownsize(int downsize);
 };
 
 #endif //FEATURE_MATCH_H

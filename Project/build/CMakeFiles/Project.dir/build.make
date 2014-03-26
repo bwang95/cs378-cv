@@ -115,11 +115,59 @@ CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.provides: CMakeFiles/Project
 
 CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.provides.build: CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o
 
+CMakeFiles/Project.dir/src/CornerDetector.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/CornerDetector.cpp.o: ../src/CornerDetector.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/CornerDetector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/CornerDetector.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp
+
+CMakeFiles/Project.dir/src/CornerDetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/CornerDetector.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp > CMakeFiles/Project.dir/src/CornerDetector.cpp.i
+
+CMakeFiles/Project.dir/src/CornerDetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/CornerDetector.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp -o CMakeFiles/Project.dir/src/CornerDetector.cpp.s
+
+CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires:
+.PHONY : CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires
+
+CMakeFiles/Project.dir/src/CornerDetector.cpp.o.provides: CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/CornerDetector.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/src/CornerDetector.cpp.o.provides
+
+CMakeFiles/Project.dir/src/CornerDetector.cpp.o.provides.build: CMakeFiles/Project.dir/src/CornerDetector.cpp.o
+
+CMakeFiles/Project.dir/src/Display.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/Display.cpp.o: ../src/Display.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Project.dir/src/Display.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/src/Display.cpp.o -c /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp
+
+CMakeFiles/Project.dir/src/Display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/Display.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp > CMakeFiles/Project.dir/src/Display.cpp.i
+
+CMakeFiles/Project.dir/src/Display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Display.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp -o CMakeFiles/Project.dir/src/Display.cpp.s
+
+CMakeFiles/Project.dir/src/Display.cpp.o.requires:
+.PHONY : CMakeFiles/Project.dir/src/Display.cpp.o.requires
+
+CMakeFiles/Project.dir/src/Display.cpp.o.provides: CMakeFiles/Project.dir/src/Display.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/src/Display.cpp.o.provides.build
+.PHONY : CMakeFiles/Project.dir/src/Display.cpp.o.provides
+
+CMakeFiles/Project.dir/src/Display.cpp.o.provides.build: CMakeFiles/Project.dir/src/Display.cpp.o
+
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/src/main.cpp.o" \
 "CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o" \
-"CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o"
+"CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o" \
+"CMakeFiles/Project.dir/src/CornerDetector.cpp.o" \
+"CMakeFiles/Project.dir/src/Display.cpp.o"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
@@ -127,6 +175,8 @@ Project_EXTERNAL_OBJECTS =
 Project: CMakeFiles/Project.dir/src/main.cpp.o
 Project: CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o
 Project: CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o
+Project: CMakeFiles/Project.dir/src/CornerDetector.cpp.o
+Project: CMakeFiles/Project.dir/src/Display.cpp.o
 Project: /opt/ros/hydro/lib/libopencv_calib3d.so
 Project: /opt/ros/hydro/lib/libopencv_contrib.so
 Project: /opt/ros/hydro/lib/libopencv_core.so
@@ -157,6 +207,8 @@ CMakeFiles/Project.dir/build: Project
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/main.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/FeatureMatcher.cpp.o.requires
 CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/FeatureMatcherData.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/CornerDetector.cpp.o.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/Display.cpp.o.requires
 .PHONY : CMakeFiles/Project.dir/requires
 
 CMakeFiles/Project.dir/clean:

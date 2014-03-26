@@ -6,6 +6,38 @@
 
 #IncludeRegexTransform: 
 
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/CornerDetector.cpp
+opencv2/highgui/highgui.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+lib/CornerDetector.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/CornerDetector.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/Display.cpp
+opencv2/imgproc/imgproc.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/imgproc/imgproc.hpp
+opencv2/highgui/highgui.hpp
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/opencv2/highgui/highgui.hpp
+lib/Display.h
+/home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/Display.h
+math.h
+-
+stdlib.h
+-
+stdio.h
+-
+iostream
+-
+opencv2/opencv.hpp
+-
+
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/FeatureMatcher.cpp
 lib/FeatureMatcher.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/FeatureMatcher.h
@@ -111,4 +143,6 @@ opencv2/nonfree/features2d.hpp
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/main.cpp
 lib/All.h
 /home/brian/Documents/Classes/CS378RobotsLeonetti/cs378-cv/Project/src/lib/All.h
+iostream
+-
 

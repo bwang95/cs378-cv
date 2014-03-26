@@ -30,9 +30,13 @@ FeatureMatcher::~FeatureMatcher() {
 	delete &data_2;
 }
 
+void FeatureMatcher::setDownsize(int downsize){
+	this -> downsize = downsize;
+}
+
 int FeatureMatcher::run() {
-	data_1.run();
-	data_2.run();
+	data_1.run(downsize == -1 ? 3 : downsize);
+	data_2.run(downsize == -1 ? 3 : downsize);
 }
 
 vector<DMatch> FeatureMatcher::matchFeatures() {
