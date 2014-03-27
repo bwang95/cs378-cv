@@ -16,5 +16,5 @@
 *.log
 
 # User-specific Folders
-src/CMakeFiles/
-build/
+Project/src/CMakeFiles/
+Project/build/
