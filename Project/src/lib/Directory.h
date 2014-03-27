@@ -15,9 +15,9 @@ class Directory
 public:
     string *list;
     int size;
-    string direct;
+    const char *direct;
     Directory(string);
-    bool getList(string*);
+    bool getList();
     int getSize() {return size;}
 };
 

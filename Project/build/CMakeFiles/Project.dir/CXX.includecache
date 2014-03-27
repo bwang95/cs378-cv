@@ -31,6 +31,8 @@ stdio.h
 -
 lib/Directory.h
 /home/andy/opencv_projects/cs378-cv/Project/src/lib/Directory.h
+iostream
+-
 
 /home/andy/opencv_projects/cs378-cv/Project/src/Display.cpp
 opencv2/imgproc/imgproc.hpp
@@ -168,5 +170,7 @@ opencv2/nonfree/features2d.hpp
 lib/All.h
 /home/andy/opencv_projects/cs378-cv/Project/src/lib/All.h
 iostream
+-
+string
 -
 
