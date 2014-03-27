@@ -14,3 +14,7 @@
 
 # Log files
 *.log
+
+# User-specific Folders
+src/CMakeFiles/
+build/
