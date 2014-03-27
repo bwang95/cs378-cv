@@ -15,6 +15,15 @@ Directory::Directory(string dir)
   list = new string[size];
 }
 
+Directory::Directory(char *dir)
+{
+  de = NULL;
+  d = NULL;
+  direct = dir;
+  size = getListSize();
+  list = new string[size];
+}
+
 bool Directory::makeList()
 {
   d = NULL;
@@ -25,7 +34,11 @@ bool Directory::makeList()
   d = opendir(direct);
   int i = 0;
   while(de = readdir(d))
+	{
+	string name = de->d_name;
+	if(name.compare(".")!= 0 && name.compare("..")!=0)
 	list[i++] = de->d_name;
+	}
 
   return(true);
 

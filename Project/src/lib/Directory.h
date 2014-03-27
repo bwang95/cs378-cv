@@ -17,6 +17,7 @@ public:
     string *list;
     const char *direct;
     Directory(string);
+    Directory(char*);
     bool makeList();
     int getSize() {return size;}
 };
