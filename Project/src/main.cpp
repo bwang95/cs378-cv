@@ -7,10 +7,13 @@ using namespace std;
 int main(int argc, char **argv){
 	
 	Directory *dir = new Directory("ImgDB");
-        cout<<"Number of files in directory: "<<dir->getSize()<<endl;
-	if(dir->getList())
+	int size = dir->getSize();
+        cout<<"Number of files in directory: "<<size<<endl;
+	//getSize retrieves the number of objects in the directory
+	//makeList() creates the list pointer array and returns true if successful
+	if(dir->makeList())
 	{
-		for(int i = 0; i<dir->getSize();i++)
+		for(int i = 0; i<size;i++)
 			cout<<dir->list[i]<<" ";
 	}
 	else

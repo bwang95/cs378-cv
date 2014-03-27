@@ -15,7 +15,7 @@ Directory::Directory(string dir)
   list = new string[size];
 }
 
-bool Directory::getList()
+bool Directory::makeList()
 {
   d = NULL;
   de = NULL;  

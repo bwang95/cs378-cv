@@ -12,12 +12,12 @@ class Directory
     struct dirent *de;
     DIR *d;
     int getListSize();
+    int size;
 public:
     string *list;
-    int size;
     const char *direct;
     Directory(string);
-    bool getList();
+    bool makeList();
     int getSize() {return size;}
 };
 
