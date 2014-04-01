@@ -1,3 +1,6 @@
+function clean(){
+	rm -rf build
+}
 function newDir(){
 	mkdir build
 	cd build
@@ -12,5 +15,4 @@ function remake(){
 	compile
 }
 
-./clean.sh
 remake

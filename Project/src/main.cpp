@@ -27,6 +27,9 @@ int main(int argc, char **argv) {
 		matcher -> setDownsize(atoi(argv[3]));
 	matcher -> drawFeatures();
 
+	// delete matcher;
+	// delete dir;
+
 	waitKey(0);
 	return 0;
 }

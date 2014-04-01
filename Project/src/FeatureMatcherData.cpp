@@ -17,9 +17,13 @@ FeatureMatcherData::FeatureMatcherData(Mat img) {
 }
 
 FeatureMatcherData::~FeatureMatcherData() {
+	cout << "DECON FeatureMatcherData" << endl;
 	delete &img;
-	delete &descriptors;
+	cout << "DELETED img" << endl;
+	// delete &descriptors;
+	// cout << "DELETED descriptors" << endl;
 	delete &keypoints;
+	cout << "DELETED keypoints" << endl;
 }
 
 void FeatureMatcherData::downsize(int downSize) {

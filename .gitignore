@@ -18,3 +18,7 @@
 # User-specific Folders
 Project/src/CMakeFiles/
 Project/build/
+
+# vim files
+*.swo
+*.swp

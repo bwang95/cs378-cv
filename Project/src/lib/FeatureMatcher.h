@@ -23,7 +23,7 @@ public:
 	~FeatureMatcher();
 	int run();
 	vector<DMatch> matchFeatures();
-	void drawFeatures();
+	int drawFeatures();
 	void setDownsize(int downsize);
 };
 

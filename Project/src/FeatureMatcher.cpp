@@ -27,6 +27,7 @@ FeatureMatcher::FeatureMatcher(char *img1, char *img2) {
 }
 
 FeatureMatcher::~FeatureMatcher() {
+	cout << "DECONSTRUCTOR CALLED" << endl;
 	delete &data_1;
 	delete &data_2;
 }
@@ -80,7 +81,7 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	return good_matches;
 }
 
-void FeatureMatcher::drawFeatures() {
+int FeatureMatcher::drawFeatures() {
 	vector<DMatch> good_matches = matchFeatures();
 
 	Mat img_1 = data_1.img;
@@ -99,4 +100,5 @@ void FeatureMatcher::drawFeatures() {
 
 	for ( int i = 0; i < (int)good_matches.size(); i++ )
 		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
+	return good_matches.size();
 }

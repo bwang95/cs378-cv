@@ -9,8 +9,6 @@ using namespace cv;
 using namespace std;
 
 /// Global variables
-Mat src, src_gray;
-
 int maxCorners = 23;
 int maxTrackbar = 100;
 
@@ -21,7 +19,7 @@ int maxTrackbar = 100;
  * @function goodFeaturesToTrack_Demo.cpp
  * @brief Apply Shi-Tomasi corner detector
  */
-int detectCorners(double qualityLevel, double minDistance, int blockSize, bool useHarrisDetector, double k) {
+int detectCorners(Mat src, double qualityLevel, double minDistance, int blockSize, bool useHarrisDetector, double k) {
 	if ( maxCorners < 1 )
 		maxCorners = 1;
 
@@ -34,7 +32,7 @@ int detectCorners(double qualityLevel, double minDistance, int blockSize, bool u
 	// double k = 0.04;
 
 	/// Copy the source image
-	Mat copy;
+	Mat copy, src_gray;
 	copy = src.clone();
 
 	/// Apply corner detection
