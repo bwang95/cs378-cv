@@ -16,7 +16,7 @@ using namespace std;
 using namespace cv;
 
 class FeatureMatcher {
-	FeatureMatcherData data_1, data_2;
+	FeatureMatcherData *data_1, *data_2;
 	int downsize;
 public:
 	FeatureMatcher(char *img1, char *img2);

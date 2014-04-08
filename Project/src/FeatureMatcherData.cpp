@@ -11,25 +11,21 @@
 #include "opencv2/nonfree/features2d.hpp"
 
 FeatureMatcherData::FeatureMatcherData(Mat img) {
-	this -> img = img;
-	keypoints = *new vector<KeyPoint>();
-	descriptors = *new Mat();
+	this -> img = &img;
+	keypoints = new vector<KeyPoint>();
+	descriptors = new Mat();
 }
 
 FeatureMatcherData::~FeatureMatcherData() {
-	cout << "DECON FeatureMatcherData" << endl;
-	delete &img;
-	cout << "DELETED img" << endl;
-	// delete &descriptors;
-	// cout << "DELETED descriptors" << endl;
-	delete &keypoints;
-	cout << "DELETED keypoints" << endl;
+	delete img;
+	delete descriptors;
+	delete keypoints;
 }
 
 void FeatureMatcherData::downsize(int downSize) {
-	Mat tmp = img;
+	Mat *tmp = img;
 	for (int i = 0; i < downSize; i++) {
-		pyrDown(tmp, img, Size(tmp.cols / 2, tmp.rows / 2));
+		pyrDown(*tmp, *img, Size(tmp -> cols / 2, tmp -> rows / 2));
 		tmp = img;
 	}
 }
@@ -37,12 +33,12 @@ void FeatureMatcherData::downsize(int downSize) {
 void FeatureMatcherData::calcKeyPoints() {
 	int minHessian = 400;
 	SurfFeatureDetector detector( minHessian );
-	detector.detect( img, keypoints );
+	detector.detect( *img, *keypoints );
 }
 
 void FeatureMatcherData::calcDescriptors() {
 	SurfDescriptorExtractor extractor;
-	extractor.compute( img, keypoints, descriptors );
+	extractor.compute( *img, *keypoints, *descriptors );
 }
 
 void FeatureMatcherData::run(int downSize) {

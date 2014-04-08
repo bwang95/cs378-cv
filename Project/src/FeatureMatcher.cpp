@@ -22,42 +22,41 @@ FeatureMatcher::FeatureMatcher(char *img1, char *img2) {
 	}
 	downsize = -1;
 
-	data_1 = *new FeatureMatcherData(img_1);
-	data_2 = *new FeatureMatcherData(img_2);
+	data_1 = new FeatureMatcherData(img_1);
+	data_2 = new FeatureMatcherData(img_2);
 }
 
 FeatureMatcher::~FeatureMatcher() {
-	cout << "DECONSTRUCTOR CALLED" << endl;
-	delete &data_1;
-	delete &data_2;
+	delete data_1;
+	delete data_2;
 }
 
-void FeatureMatcher::setDownsize(int downsize){
+void FeatureMatcher::setDownsize(int downsize) {
 	this -> downsize = downsize;
 }
 
 int FeatureMatcher::run() {
-	data_1.run(downsize == -1 ? 3 : downsize);
-	data_2.run(downsize == -1 ? 3 : downsize);
+	data_1 -> run(downsize == -1 ? 3 : downsize);
+	data_2 -> run(downsize == -1 ? 3 : downsize);
 }
 
 vector<DMatch> FeatureMatcher::matchFeatures() {
 	//Make sure run() is called first...
 	run();
 
-	Mat descriptors_1 = data_1.descriptors;
-	Mat descriptors_2 = data_2.descriptors;
+	Mat *descriptors_1 = data_1 -> descriptors;
+	Mat *descriptors_2 = data_2 -> descriptors;
 
 	//-- Step 3: Matching descriptor vectors using FLANN matcher
 	FlannBasedMatcher matcher;
 	std::vector< DMatch > matches;
-	matcher.match( descriptors_1, descriptors_2, matches );
+	matcher.match( *descriptors_1, *descriptors_2, matches );
 
 
 	double max_dist = 0; double min_dist = 100;
 
 	//-- Quick calculation of max and min distances between keypoints
-	for ( int i = 0; i < descriptors_1.rows; i++ ) {
+	for ( int i = 0; i < descriptors_1 -> rows; i++ ) {
 		double dist = matches[i].distance;
 		if ( dist < min_dist ) min_dist = dist;
 		if ( dist > max_dist ) max_dist = dist;
@@ -72,7 +71,7 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	//-- PS.- radiusMatch can also be used here.
 	std::vector< DMatch > good_matches;
 
-	for ( int i = 0; i < descriptors_1.rows; i++ ) {
+	for ( int i = 0; i < descriptors_1 -> rows; i++ ) {
 		if ( matches[i].distance <= max(2 * min_dist, 0.02) ) {
 			good_matches.push_back( matches[i]);
 		}
@@ -84,14 +83,14 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 int FeatureMatcher::drawFeatures() {
 	vector<DMatch> good_matches = matchFeatures();
 
-	Mat img_1 = data_1.img;
-	Mat img_2 = data_2.img;
+	Mat *img_1 = data_1 -> img;
+	Mat *img_2 = data_2 -> img;
 
-	vector<KeyPoint> keypoints_1 = data_1.keypoints;
-	vector<KeyPoint> keypoints_2 = data_2.keypoints;
+	vector<KeyPoint> *keypoints_1 = data_1 -> keypoints;
+	vector<KeyPoint> *keypoints_2 = data_2 -> keypoints;
 
 	Mat img_matches;
-	drawMatches( img_1, keypoints_1, img_2, keypoints_2,
+	drawMatches( *img_1, *keypoints_1, *img_2, *keypoints_2,
 	             good_matches, img_matches, Scalar::all(-1), Scalar::all(-1),
 	             vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 

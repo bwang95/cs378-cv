@@ -16,8 +16,8 @@ using namespace std;
 
 class FeatureMatcherData {
 public:
-	Mat img, descriptors;
-	vector<KeyPoint> keypoints;
+	Mat *img, *descriptors;
+	vector<KeyPoint> *keypoints;
 
 	FeatureMatcherData() {}
 	FeatureMatcherData(Mat img);
