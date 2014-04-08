@@ -6,55 +6,18 @@
 #include <iostream>
 using namespace std;
 
-Directory::Directory(string dir)
-{
-  de = NULL;
-  d = NULL;
-  direct = dir.c_str();
-  size = getListSize();
-  list = new string[size];
-}
-
-Directory::Directory(char *dir)
-{
-  de = NULL;
-  d = NULL;
-  direct = dir;
-  size = getListSize();
-  list = new string[size];
-}
-
-bool Directory::makeList()
-{
-  d = NULL;
-  de = NULL;  
-  if(size == 0)
-    return(false);
-
-  d = opendir(direct);
-  int i = 0;
-  while(de = readdir(d))
-	{
-	string name = de->d_name;
-	if(name.compare(".")!= 0 && name.compare("..")!=0)
-	list[i++] = de->d_name;
+Directory::Directory(string dir) {
+	DIR *d = opendir(dir.c_str());
+	int i = 0;
+	struct dirent *de = NULL;
+	while (de = readdir(d)) {
+		string name = de->d_name;
+		if (name != "." && name != "..")
+			list.push_back(de -> d_name);
 	}
-
-  return(true);
-
+	closedir(d);
 }
 
-int Directory::getListSize()
-{
-  d=opendir(direct);
-  if(d == NULL)
-    return 0;
-
-  // Loop while not NULL
-  int i = 0;
-  while(de = readdir(d))
- 	i++;
- 
-  closedir(d);
-  return(i);
+int Directory::getSize() {
+	return list.size();
 }

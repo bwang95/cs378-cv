@@ -13,16 +13,14 @@
 using namespace std;
 using namespace cv;
 
-FeatureMatcher::FeatureMatcher(char *img1, char *img2):
+FeatureMatcher::FeatureMatcher(const char *img1, const char *img2):
 	img_1(imread(img1, CV_LOAD_IMAGE_GRAYSCALE)),
-	img_2(imread(img2, CV_LOAD_IMAGE_GRAYSCALE)) {
+	img_2(imread(img2, CV_LOAD_IMAGE_GRAYSCALE)),
+	downsize(3) {
 	if ( !img_1.data || !img_2.data ) {
 		std::cout << " --(!) Error reading images " << std::endl;
 		return;
 	}
-	downsize = -1;
-	goodmatches = 0;
-
 	data_1 = new FeatureMatcherData(&img_1);
 	data_2 = new FeatureMatcherData(&img_2);
 }
@@ -37,27 +35,27 @@ void FeatureMatcher::setDownsize(int downsize) {
 }
 
 int FeatureMatcher::run() {
-	data_1 -> run(downsize == -1 ? 3 : downsize);
-	data_2 -> run(downsize == -1 ? 3 : downsize);
+	data_1 -> run(downsize);
+	data_2 -> run(downsize);
 }
 
 vector<DMatch> FeatureMatcher::matchFeatures() {
 	//Make sure run() is called first...
 	run();
 
-	Mat *descriptors_1 = data_1 -> descriptors;
-	Mat *descriptors_2 = data_2 -> descriptors;
+	// Mat *descriptors_1 = data_1 -> descriptors;
+	// Mat *descriptors_2 = data_2 -> descriptors;
 
 	//-- Step 3: Matching descriptor vectors using FLANN matcher
 	FlannBasedMatcher matcher;
 	std::vector< DMatch > matches;
-	matcher.match( *descriptors_1, *descriptors_2, matches );
+	matcher.match( data_1 -> descriptors, data_2 -> descriptors, matches );
 
 
 	double max_dist = 0; double min_dist = 100;
 
 	//-- Quick calculation of max and min distances between keypoints
-	for ( int i = 0; i < descriptors_1 -> rows; i++ ) {
+	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
 		double dist = matches[i].distance;
 		if ( dist < min_dist ) min_dist = dist;
 		if ( dist > max_dist ) max_dist = dist;
@@ -72,7 +70,7 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	//-- PS.- radiusMatch can also be used here.
 	std::vector< DMatch > good_matches;
 
-	for ( int i = 0; i < descriptors_1 -> rows; i++ ) {
+	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
 		if ( matches[i].distance <= max(2 * min_dist, 0.02) ) {
 			good_matches.push_back( matches[i]);
 		}
@@ -80,27 +78,20 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 
 	return good_matches;
 }
-int FeatureMatcher::drawFeatures(bool draw,bool print) {
+int FeatureMatcher::drawFeatures(bool draw, bool print) {
 	vector<DMatch> good_matches = matchFeatures();
-	
-	Mat *img_1 = data_1 -> img;
-	Mat *img_2 = data_2 -> img;
-
-	vector<KeyPoint> *keypoints_1 = data_1 -> keypoints;
-	vector<KeyPoint> *keypoints_2 = data_2 -> keypoints;
 
 	Mat img_matches;
-	drawMatches( *img_1, *keypoints_1, *img_2, *keypoints_2,
+	drawMatches( img_1, data_1 -> keypoints, img_2, data_2 -> keypoints,
 	             good_matches, img_matches, Scalar::all(-1), Scalar::all(-1),
 	             vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 
 	//-- Show detected matches
-	if(draw)				// Draws if true
-	imshow( "Good Matches", img_matches );
+	if (draw)               // Draws if true
+		imshow( "Good Matches", img_matches );
 
-	goodmatches = (int)good_matches.size();
-	if(print)
-	for ( int i = 0; i < (int)good_matches.size(); i++ )
-		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
+	if (print)
+		for ( int i = 0; i < good_matches.size(); i++ )
+			printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
 	return good_matches.size();
 }

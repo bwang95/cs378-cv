@@ -16,12 +16,12 @@ using namespace std;
 
 class FeatureMatcherData {
 public:
-	Mat *img, *descriptors;
-	vector<KeyPoint> *keypoints;
+	Mat *img, descriptors;
+	vector<KeyPoint> keypoints;
 
-	FeatureMatcherData() {}
+	// FeatureMatcherData() {}
 	FeatureMatcherData(Mat *img);
-	~FeatureMatcherData();
+	// ~FeatureMatcherData();
 	void downsize(int downSize);
 	void calcKeyPoints();
 	void calcDescriptors();

@@ -6,7 +6,7 @@ function newDir(){
 	cd build
 }
 function compile(){
-	cmake ..
+	cmake -DCMAKE_BUILD_TYPE=Debug ..
 	make -j8
 }
 function remake(){

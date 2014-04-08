@@ -5,21 +5,14 @@
 #include <dirent.h>
 #include <string>
 #include <stdio.h>
+#include <vector>
 
 using namespace std;
-class Directory 
-{
-    struct dirent *de;
-    DIR *d;
-    int getListSize();
-    int size;
+class Directory {
 public:
-    string *list;
-    const char *direct;
-    Directory(string);
-    Directory(char*);
-    bool makeList();
-    int getSize() {return size;}
+	vector<string> list;
+	Directory(string);
+	int getSize();
 };
 
 #endif
