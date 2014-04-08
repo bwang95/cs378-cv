@@ -10,24 +10,23 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/nonfree/features2d.hpp"
 
-FeatureMatcherData::FeatureMatcherData(Mat img) {
-	this -> img = &img;
+FeatureMatcherData::FeatureMatcherData(Mat *img) {
+	this -> img = img;
 	keypoints = new vector<KeyPoint>();
 	descriptors = new Mat();
 }
 
 FeatureMatcherData::~FeatureMatcherData() {
-	delete img;
+	// delete img;
 	delete descriptors;
 	delete keypoints;
 }
 
 void FeatureMatcherData::downsize(int downSize) {
 	Mat *tmp = img;
-	for (int i = 0; i < downSize; i++) {
+	for (int i = 0; i < downSize; i++)
 		pyrDown(*tmp, *img, Size(tmp -> cols / 2, tmp -> rows / 2));
-		tmp = img;
-	}
+
 }
 
 void FeatureMatcherData::calcKeyPoints() {

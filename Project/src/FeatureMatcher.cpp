@@ -13,17 +13,17 @@
 using namespace std;
 using namespace cv;
 
-FeatureMatcher::FeatureMatcher(char *img1, char *img2) {
-	Mat img_1 = imread(img1, CV_LOAD_IMAGE_GRAYSCALE);
-	Mat img_2 = imread(img2, CV_LOAD_IMAGE_GRAYSCALE);
+FeatureMatcher::FeatureMatcher(char *img1, char *img2):
+	img_1(imread(img1, CV_LOAD_IMAGE_GRAYSCALE)),
+	img_2(imread(img2, CV_LOAD_IMAGE_GRAYSCALE)) {
 	if ( !img_1.data || !img_2.data ) {
 		std::cout << " --(!) Error reading images " << std::endl;
 		return;
 	}
 	downsize = -1;
 
-	data_1 = new FeatureMatcherData(img_1);
-	data_2 = new FeatureMatcherData(img_2);
+	data_1 = new FeatureMatcherData(&img_1);
+	data_2 = new FeatureMatcherData(&img_2);
 }
 
 FeatureMatcher::~FeatureMatcher() {

@@ -20,7 +20,7 @@ public:
 	vector<KeyPoint> *keypoints;
 
 	FeatureMatcherData() {}
-	FeatureMatcherData(Mat img);
+	FeatureMatcherData(Mat *img);
 	~FeatureMatcherData();
 	void downsize(int downSize);
 	void calcKeyPoints();
