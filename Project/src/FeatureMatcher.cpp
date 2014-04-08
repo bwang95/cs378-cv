@@ -21,6 +21,7 @@ FeatureMatcher::FeatureMatcher(char *img1, char *img2):
 		return;
 	}
 	downsize = -1;
+	goodmatches = 0;
 
 	data_1 = new FeatureMatcherData(&img_1);
 	data_2 = new FeatureMatcherData(&img_2);
@@ -79,10 +80,9 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 
 	return good_matches;
 }
-
-int FeatureMatcher::drawFeatures() {
+int FeatureMatcher::drawFeatures(bool draw,bool print) {
 	vector<DMatch> good_matches = matchFeatures();
-
+	
 	Mat *img_1 = data_1 -> img;
 	Mat *img_2 = data_2 -> img;
 
@@ -95,8 +95,11 @@ int FeatureMatcher::drawFeatures() {
 	             vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 
 	//-- Show detected matches
+	if(draw)				// Draws if true
 	imshow( "Good Matches", img_matches );
 
+	goodmatches = (int)good_matches.size();
+	if(print)
 	for ( int i = 0; i < (int)good_matches.size(); i++ )
 		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
 	return good_matches.size();
