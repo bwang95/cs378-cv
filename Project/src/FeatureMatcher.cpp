@@ -71,7 +71,7 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	std::vector< DMatch > good_matches;
 
 	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
-		if ( matches[i].distance <= max(2 * min_dist, 0.02) ) {
+		if ( matches[i].distance <= max(2*min_dist, 0.02) ) {
 			good_matches.push_back( matches[i]);
 		}
 	}
