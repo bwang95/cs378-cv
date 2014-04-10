@@ -43,9 +43,6 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	//Make sure run() is called first...
 	run();
 
-	// Mat *descriptors_1 = data_1 -> descriptors;
-	// Mat *descriptors_2 = data_2 -> descriptors;
-
 	//-- Step 3: Matching descriptor vectors using FLANN matcher
 	FlannBasedMatcher matcher;
 	std::vector< DMatch > matches;
@@ -71,7 +68,7 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	std::vector< DMatch > good_matches;
 
 	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
-		if ( matches[i].distance <= max(2*min_dist, 0.02) ) {
+		if ( matches[i].distance <= max(2 * min_dist, 0.02) ) {
 			good_matches.push_back( matches[i]);
 		}
 	}
@@ -86,6 +83,7 @@ int FeatureMatcher::drawFeatures(bool draw, bool print) {
 	             good_matches, img_matches, Scalar::all(-1), Scalar::all(-1),
 	             vector<char>(), DrawMatchesFlags::NOT_DRAW_SINGLE_POINTS );
 
+	
 	//-- Show detected matches
 	if (draw)               // Draws if true
 		imshow( "Good Matches", img_matches );
