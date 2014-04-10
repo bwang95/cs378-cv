@@ -43,14 +43,16 @@ int main(int argc, char **argv) {
 																	//and false to not print out each keypoint
 				cout << temp.goodmatches << " matches" << endl;
 
+
+				vector<ImageData>::iterator it;
 				if(topImages.size() == 0)
 					topImages.push_back(temp);
 				else
 				if(topImages.size() < TOP_NUM)
 				{
-					vector<ImageData>::iterator it = topImages.begin();
+					it = topImages.begin();
 					int i = 0;
-					while(temp.goodmatches < topImages[i].goodmatches && it < topImages.end())
+					while(temp.goodmatches <= topImages[i].goodmatches && it < topImages.end())
 					{
 						it++;i++;
 					}

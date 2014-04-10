@@ -34,7 +34,7 @@ void FeatureMatcherData::downsize(int downSize) {
 }
 
 void FeatureMatcherData::calcKeyPoints() {
-	int minHessian = 100;
+	int minHessian = 800;
 	SiftFeatureDetector detector( minHessian );
 	detector.detect( *img, keypoints );
 }
