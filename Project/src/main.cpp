@@ -48,10 +48,15 @@ int main(int argc, char **argv) {
 		}
 
 		cout << "\n\nMost Matches: " << max << endl;
+		if(max<20)
+			cout<<"No match";
+		else
+		{
 		cout << "File name: " << maxImg << endl;
 		FeatureMatcher matcher(argv[1], maxImg.c_str());
 		matcher.drawFeatures(true, false);
 		// delete matcher;
+		}
 	}
 	waitKey(0);
 	return 0;

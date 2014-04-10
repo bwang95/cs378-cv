@@ -1,1 +1,1 @@
-./build/Project ImgDB/IMAGEDB/room1/DSC02388.JPG ImgDB/IMAGEDB/room1/ 
+./build/Project ImgDB/3.jpg ImgDB/IMAGEDB/room3/ 
