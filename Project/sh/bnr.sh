@@ -16,4 +16,6 @@ function remake(){
 }
 
 remake
-./build/Project ImgDB/DSC02388.JPG ImgDB/DSC02389.JPG 
+cd ..
+./sh/run.sh
+

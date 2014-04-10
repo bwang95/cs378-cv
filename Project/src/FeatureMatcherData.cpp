@@ -11,17 +11,7 @@
 #include "opencv2/nonfree/features2d.hpp"
 
 FeatureMatcherData::FeatureMatcherData(Mat *image):
-	img(image), descriptors(), keypoints() {
-	// this -> img = img;
-	// keypoints = new vector<KeyPoint>();
-	// descriptors = new Mat();
-}
-
-// FeatureMatcherData::~FeatureMatcherData() {
-//  // delete img;
-//  delete descriptors;
-//  delete keypoints;
-// }
+	img(image), descriptors(), keypoints() {}
 
 void FeatureMatcherData::downsize(int downSize) {
 	Mat tmp = *img;
@@ -34,7 +24,11 @@ void FeatureMatcherData::downsize(int downSize) {
 }
 
 void FeatureMatcherData::calcKeyPoints() {
+<<<<<<< HEAD
 	int minHessian = 800;
+=======
+	int minHessian = 500;
+>>>>>>> b95292d7d25fc2b1435b5377dfc9b3772361bb31
 	SiftFeatureDetector detector( minHessian );
 	detector.detect( *img, keypoints );
 }
