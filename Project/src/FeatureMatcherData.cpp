@@ -35,12 +35,12 @@ void FeatureMatcherData::downsize(int downSize) {
 
 void FeatureMatcherData::calcKeyPoints() {
 	int minHessian = 800;
-	SurfFeatureDetector detector( minHessian );
+	SiftFeatureDetector detector( minHessian );
 	detector.detect( *img, keypoints );
 }
 
 void FeatureMatcherData::calcDescriptors() {
-	SurfDescriptorExtractor extractor;
+	SiftDescriptorExtractor extractor;
 	extractor.compute( *img, keypoints, descriptors );
 }
 
