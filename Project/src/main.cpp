@@ -48,25 +48,23 @@ int main(int argc, char **argv) {
 				if(topImages.size() == 0)
 					topImages.push_back(temp);
 				else
-				if(topImages.size() < TOP_NUM)
 				{
 					it = topImages.begin();
 					int i = 0;
-					while(temp.goodmatches <= topImages[i].goodmatches && it < topImages.end())
+					while(topImages[i].goodmatches < temp.goodmatches  && i <= TOP_NUM && it < topImages.end())
 					{
 						it++;i++;
 					}
+
+					if(topImages.size()<TOP_NUM)
 					topImages.insert(it,temp);
-				}
-				else
-				{
-					if(topImages.back().goodmatches < temp.goodmatches)
+					else
+					if(topImages.size() == TOP_NUM && i>0)
 					{
-						topImages.push_back(temp);
+						topImages.insert(it,temp);
 						topImages.erase(topImages.begin());
 					}
 				}
-				
 				
 			}
 
