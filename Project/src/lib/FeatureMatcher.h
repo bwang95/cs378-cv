@@ -19,13 +19,15 @@ class FeatureMatcher {
 	FeatureMatcherData *data_1, *data_2;
 	Mat img_1, img_2;
 	int downsize;
+	int min_num;
 public:
 	FeatureMatcher(const char *img1, const char *img2);
 	~FeatureMatcher();
 	int run();
 	vector<DMatch> matchFeatures();
-	int drawFeatures(bool draw, bool print);
+	int drawFeatures(bool);
 	void setDownsize(int downsize);
+	int getMinNum() {return min_num;}
 };
 
 #endif //FEATURE_MATCH_H
