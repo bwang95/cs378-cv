@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 	ImageData temp;
 	int TOP_NUM = 4;
 
-	if (argc < 3) { //not enough arguments
+	if (argc < 3) { //if not enough arguments
 		cout << "Project <img> <directory> (optional: downsize)" << endl;
 		return 1;
 	}
@@ -39,11 +39,10 @@ int main(int argc, char **argv) {
 
 				temp.path = dir.list[i];
 //				temp.matched = matcher;
-				temp.goodmatches = matcher.drawFeatures(false, false);  //set to false to not draw,
-																	//and false to not print out each keypoint
+				temp.goodmatches = matcher.drawFeatures(false, false);  //set to false to not draw and false to not print out each keypoint
 				cout << temp.goodmatches << " matches" << endl;
 
-
+				//Top matches algorithm
 				vector<ImageData>::iterator it;
 				if(topImages.size() == 0)
 					topImages.push_back(temp);
@@ -57,7 +56,7 @@ int main(int argc, char **argv) {
 					}
 
 					if(topImages.size()<TOP_NUM)
-					topImages.insert(it,temp);
+						topImages.insert(it,temp);
 					else
 					if(topImages.size() == TOP_NUM && i>0)
 					{
@@ -76,6 +75,9 @@ int main(int argc, char **argv) {
 			cout<<"Number of Matches: "<< topImages[i].goodmatches<<endl;
 			cout<<"File Name: " << topImages[i].path<<endl<<endl;
 
+			FeatureMatcher matcher(argv[1], topImages[i].path.c_str());
+			matcher.drawFeatures(true, false);
+			waitKey(0);
 		}
 
 		// // cout << "\n\nMost Matches: " << max << endl;
