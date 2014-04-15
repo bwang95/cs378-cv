@@ -15,7 +15,6 @@ int main(int argc, char **argv) {
 
 	vector<ImageData> topImages;
 	vector<ImageData> definiteImages;
-	bool isMin;
 	ImageData temp;
 	int TOP_NUM = 4;
 
@@ -32,7 +31,6 @@ int main(int argc, char **argv) {
 		cout << "Computing matches."<<endl;
 		for (int i = 0; i < dir.getSize(); i++) 
 		{
-			isMin = false;
 			dir.list[i] = argv[2] + dir.list[i];  //appends file dir list to img name
 
 			//cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
@@ -51,14 +49,15 @@ int main(int argc, char **argv) {
 
 				//Top matches algorithm
 				vector<ImageData>::iterator it;
+				if(temp.min_num>0)
+						definiteImages.push_back(temp);
+
 				if(topImages.size() == 0)
 					topImages.push_back(temp);
 				else
 				{
 					it = topImages.begin();
-					int i = 0;
-					if(temp.min_num>0)
-						definiteImages.push_back(temp);
+					int i = 0;					
 
 					while(topImages[i].goodmatches < temp.goodmatches  && i <= TOP_NUM && it < topImages.end())
 					{
@@ -90,12 +89,12 @@ int main(int argc, char **argv) {
 		}
 
 		cout << "\n\n Matches with minimum distances. (Accurate points)" <<endl;
-		for(int i = 0;i<topImages.size();i++)
+		for(int i = 0;i<definiteImages.size();i++)
 		{
-			cout<<"Number of Min Matches: "<< topImages[i].min_num<<endl;
-			cout<<"File Name: " << topImages[i].path<<endl<<endl;
+			cout<<"Number of Min Matches: "<< definiteImages[i].min_num<<endl;
+			cout<<"File Name: " << definiteImages[i].path<<endl<<endl;
 
-			FeatureMatcher matcher(argv[1], topImages[i].path.c_str());
+			FeatureMatcher matcher(argv[1], definiteImages[i].path.c_str());
 			matcher.drawFeatures(true);
 			waitKey(0);
 		}
