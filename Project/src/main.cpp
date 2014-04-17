@@ -4,59 +4,106 @@
 
 using namespace std;
 
+struct ImageData{
+	string path;
+	int goodmatches;
+	int min_num;
+//	FeatureMatcher matched;
+};
+
 int main(int argc, char **argv) {
 
-	// FeatureMatcher matcher;
-	string maxImg;
-	int max = 0;
+	vector<ImageData> topImages;
+	vector<ImageData> definiteImages;
+	ImageData temp;
+	int TOP_NUM = 4;
 
-	if (argc < 3) { //not enough arguments
+	if (argc < 3) { //if not enough arguments
 		cout << "Project <img> <directory> (optional: downsize)" << endl;
 		return 1;
 	}
 
-	//Directory *dir = new Directory("");
-	//getSize retrieves the number of objects in the directory
-	//makeList() creates the list pointer array and returns true if successful
 	Directory dir(argv[2]);
-	// cout << dir.getSize() << endl;
 	if (dir.getSize() == 0)
 		cout << "Directory not found or empty" << endl;
-	else {
-		for (int i = 0; i < dir.getSize(); i++) {
+	else 
+	{	
+		cout << "Computing matches."<<endl;
+		for (int i = 0; i < dir.getSize(); i++) 
+		{
 			dir.list[i] = argv[2] + dir.list[i];  //appends file dir list to img name
 
-			cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
-			if (string(argv[1]) == dir.list[i]) {
-				cout << "Same file" << endl;
-			} else {
+			//cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
+			if (string(argv[1]) != dir.list[i]) 
+			{
 
 				FeatureMatcher matcher(argv[1], dir.list[i].c_str());
-				if (argc >= 4)
+				if (argc >= 4)	//changes default downsize
 					matcher.setDownsize(atoi(argv[3]));
 
-				int matchSize = matcher.drawFeatures(false, false);  //set to false to not draw,
-				//and false to not print out each keypoint
-				if (max < matchSize) {
-					max = matchSize;
-					maxImg = dir.list[i];
-				}
-				cout << matchSize << " matches" << endl;
-				// delete matcher;
+				temp.path = dir.list[i];
+//				temp.matched = matcher;
+				temp.goodmatches = matcher.drawFeatures(false);  //set to false to not draw
+				temp.min_num = matcher.getMinNum();
+				//cout << temp.goodmatches << " matches" << endl;
+
+				//Top matches algorithm
+				vector<ImageData>::iterator it;
+				if(temp.min_num>0)
+						definiteImages.push_back(temp);
+
+				if(topImages.size() == 0)
+					topImages.push_back(temp);
+				else
+				{
+					it = topImages.begin();
+					int i = 0;					
+
+					while(topImages[i].goodmatches < temp.goodmatches  && i <= TOP_NUM && it < topImages.end())
+					{
+						it++;i++;
+					}
+
+					if(topImages.size()<TOP_NUM)
+						topImages.insert(it,temp);
+					else
+					if(topImages.size() == TOP_NUM && i>0)
+					{
+						topImages.insert(it,temp);
+						topImages.erase(topImages.begin());
+					}
+				}				
 			}
 
 		}
 
-		cout << "\n\nMost Matches: " << max << endl;
-		if(max<20)
-			cout<<"No match";
-		else
+		cout << "\n\n Top Matches" <<endl;
+		for(int i = 0;i<topImages.size();i++)
 		{
-		cout << "File name: " << maxImg << endl;
-		FeatureMatcher matcher(argv[1], maxImg.c_str());
-		matcher.drawFeatures(true, false);
-		// delete matcher;
+			cout<<"Number of Matches: "<< topImages[i].goodmatches<<endl;
+			cout<<"File Name: " << topImages[i].path<<endl<<endl;
+
+			FeatureMatcher matcher(argv[1], topImages[i].path.c_str());
+			matcher.drawFeatures(true);
+			waitKey(0);
 		}
+
+		cout << "\n\n Matches with minimum distances. (Accurate points)" <<endl;
+		for(int i = 0;i<definiteImages.size();i++)
+		{
+			cout<<"Number of Min Matches: "<< definiteImages[i].min_num<<endl;
+			cout<<"File Name: " << definiteImages[i].path<<endl<<endl;
+
+			FeatureMatcher matcher(argv[1], definiteImages[i].path.c_str());
+			matcher.drawFeatures(true);
+			waitKey(0);
+		}
+
+		// // cout << "\n\nMost Matches: " << max << endl;
+		// // cout << "File name: " << maxImg << endl;
+		// // FeatureMatcher matcher(argv[1], maxImg.c_str());
+		// matcher.drawFeatures(true, false);
+		// delete matcher;
 	}
 	waitKey(0);
 	return 0;

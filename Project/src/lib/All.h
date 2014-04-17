@@ -1,8 +1,6 @@
 #ifndef ALL_H
 #define ALL_H
 
-#include "CornerDetector.h"
-#include "Display.h"
 #include "FeatureMatcher.h"
 #include "FeatureMatcherData.h"
 #include "Directory.h"

@@ -1,1 +1,0 @@
-./build/Project ImgDB/DSC02388.JPG ImgDB/DSC02389.JPG 
