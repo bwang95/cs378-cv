@@ -22,3 +22,6 @@ Project/build/
 # vim files
 *.swo
 *.swp
+
+*.JPG
+*.jpg
