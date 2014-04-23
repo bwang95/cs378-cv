@@ -12,6 +12,7 @@ class Directory {
 public:
 	vector<string> list;
 	Directory(string);
+	Directory();
 	int getSize();
 };
 

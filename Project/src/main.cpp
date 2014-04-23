@@ -23,7 +23,8 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	Directory dir(argv[2]);
+	//Directory dir(argv[2]);
+	Directory dir;
 	if (dir.getSize() == 0)
 		cout << "Directory not found or empty" << endl;
 	else 
@@ -31,8 +32,6 @@ int main(int argc, char **argv) {
 		cout << "Computing matches."<<endl;
 		for (int i = 0; i < dir.getSize(); i++) 
 		{
-			dir.list[i] = argv[2] + dir.list[i];  //appends file dir list to img name
-
 			//cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
 			if (string(argv[1]) != dir.list[i]) 
 			{

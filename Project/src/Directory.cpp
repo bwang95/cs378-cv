@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "lib/Directory.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 Directory::Directory(string dir) {
@@ -13,9 +14,21 @@ Directory::Directory(string dir) {
 	while (de = readdir(d)) {
 		string name = de->d_name;
 		if (name != "." && name != "..")
-			list.push_back(de -> d_name);
+			list.push_back(dir+name);
 	}
 	closedir(d);
+}
+
+Directory::Directory(){
+	ifstream infile;
+	infile.open("FileIndex.txt", ifstream::in);
+
+	string temp;
+	while(infile){
+		infile >> temp;
+		list.push_back(temp);
+		cout<<temp<<endl;
+	}
 }
 
 int Directory::getSize() {
