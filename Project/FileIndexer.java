@@ -33,7 +33,7 @@ public class FileIndexer {
                 explore(f);
             else if (acceptedExtensions.contains(getExtension(f.getName()))){
                 System.out.println(f.getPath());
-                out.println(f.getPath().substring(10));
+                out.println(f.getPath().substring(2));
             }
         }
     }
