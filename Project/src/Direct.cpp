@@ -2,12 +2,12 @@
 #include <dirent.h>
 #include <string>
 #include <stdio.h>
-#include "lib/Directory.h"
+#include "lib/Direct.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-Directory::Directory(string dir) {
+Direct::Direct(string dir) {
 	DIR *d = opendir(dir.c_str());
 	int i = 0;
 	struct dirent *de = NULL;
@@ -19,7 +19,7 @@ Directory::Directory(string dir) {
 	closedir(d);
 }
 
-Directory::Directory(){
+Direct::Direct(){
 	ifstream infile;
 	infile.open("FileIndex.txt", ifstream::in);
 
@@ -31,6 +31,6 @@ Directory::Directory(){
 	}
 }
 
-int Directory::getSize() {
+int Direct::getSize() {
 	return list.size();
 }

@@ -8,11 +8,11 @@
 #include <vector>
 
 using namespace std;
-class Directory {
+class Direct {
 public:
 	vector<string> list;
-	Directory(string);
-	Directory();
+	Direct(string);
+	Direct();
 	int getSize();
 };
 

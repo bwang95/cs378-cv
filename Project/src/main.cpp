@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
 	}
 
 	//Directory dir(argv[2]);
-	Directory dir;
+	Direct dir;
 	if (dir.getSize() == 0)
 		cout << "Directory not found or empty" << endl;
 	else 

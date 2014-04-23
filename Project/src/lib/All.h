@@ -3,7 +3,7 @@
 
 #include "FeatureMatcher.h"
 #include "FeatureMatcherData.h"
-#include "Directory.h"
+#include "Direct.h"
 
 using namespace cv;
 using namespace std;
