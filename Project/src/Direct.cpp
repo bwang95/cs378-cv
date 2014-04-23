@@ -27,7 +27,6 @@ Direct::Direct(){
 	while(infile){
 		infile >> temp;
 		list.push_back(temp);
-		cout<<temp<<endl;
 	}
 }
 
