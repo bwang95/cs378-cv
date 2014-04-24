@@ -27,6 +27,7 @@ public:
 	vector<DMatch> matchFeatures();
 	int drawFeatures(bool);
 	void setDownsize(int downsize);
+	void setCompareImage(const char *name);
 	int getMinNum() {return min_num;}
 };
 

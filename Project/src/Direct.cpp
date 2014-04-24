@@ -14,20 +14,20 @@ Direct::Direct(string dir) {
 	while (de = readdir(d)) {
 		string name = de->d_name;
 		if (name != "." && name != "..")
-			list.push_back(dir+name);
+			list.push_back(dir + name);
 	}
 	closedir(d);
 }
 
-Direct::Direct(){
+Direct::Direct() {
 	ifstream infile;
 	infile.open("FileIndex.txt", ifstream::in);
 
 	string temp;
-	while(infile){
+	while (infile) {
 		infile >> temp;
 		list.push_back(temp);
-		cout<<temp<<endl;
+		// cout<<temp<<endl;
 	}
 }
 

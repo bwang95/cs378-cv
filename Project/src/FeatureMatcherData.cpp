@@ -30,6 +30,10 @@ void FeatureMatcherData::calcKeyPoints() {
 	detector.detect( *img, keypoints );
 }
 
+void FeatureMatcherData::setImg(Mat *image){
+	img = image;
+}
+
 void FeatureMatcherData::calcDescriptors() {
 	SiftDescriptorExtractor extractor;
 	extractor.compute( *img, keypoints, descriptors );

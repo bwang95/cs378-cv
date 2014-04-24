@@ -21,18 +21,21 @@ public class FileIndexer {
         Collections.addAll(acceptedExtensions, ext);
 
         explore(file);
+        System.out.println("Indexing finished");
     }
 
     public static void explore(File root) throws IOException {
         if (root == null || root.listFiles() == null)
             return;
+
+        System.out.println("Indexing directory " + root.getPath());
         for (File f : root.listFiles()) {
             if (f == null)
                 continue;
             if (f.isDirectory())
                 explore(f);
             else if (acceptedExtensions.contains(getExtension(f.getName()))){
-                System.out.println(f.getPath());
+                // System.out.println(f.getPath());
                 out.println(f.getPath().substring(2));
             }
         }

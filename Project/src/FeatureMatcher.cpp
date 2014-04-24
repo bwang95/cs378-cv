@@ -24,6 +24,8 @@ FeatureMatcher::FeatureMatcher(const char *img1, const char *img2):
 	}
 	data_1 = new FeatureMatcherData(&img_1);
 	data_2 = new FeatureMatcherData(&img_2);
+
+	run();
 }
 
 FeatureMatcher::~FeatureMatcher() {
@@ -40,9 +42,15 @@ int FeatureMatcher::run() {
 	data_2 -> run(downsize);
 }
 
+void FeatureMatcher::setCompareImage(const char *name){
+	img_2 = imread(name, CV_LOAD_IMAGE_GRAYSCALE);
+	data_2 -> setImg(&img_2);
+	data_2 -> run(downsize);
+}
+
 vector<DMatch> FeatureMatcher::matchFeatures() {
-	//Make sure run() is called first...
-	run();
+	// //Make sure run() is called first...
+	// run();
 
 	//-- Step 3: Matching descriptor vectors using FLANN matcher
 	FlannBasedMatcher matcher;

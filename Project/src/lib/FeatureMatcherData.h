@@ -26,6 +26,7 @@ public:
 	void calcKeyPoints();
 	void calcDescriptors();
 	void run(int downSize = 3);
+	void setImg(Mat *image);
 };
 
 #endif

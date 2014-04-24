@@ -30,13 +30,13 @@ int main(int argc, char **argv) {
 	else 
 	{	
 		cout << "Computing matches."<<endl;
-		for (int i = 0; i < dir.getSize(); i++) 
+		FeatureMatcher matcher(argv[1], dir.list[0].c_str());
+		for (int i = 1; i < dir.getSize(); i++) 
 		{
 			//cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
 			if (string(argv[1]) != dir.list[i]) 
 			{
-
-				FeatureMatcher matcher(argv[1], dir.list[i].c_str());
+				matcher.setCompareImage(dir.list[i].c_str());
 				if (argc >= 4)	//changes default downsize
 					matcher.setDownsize(atoi(argv[3]));
 
