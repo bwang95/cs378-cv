@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
 		cout << "Computing matches."<<endl;
 		
 		pthread_t threads[NUM_THREADS];
-   		int rc;
+   		pthread_t rc;
    		for(int i=0; i < NUM_THREADS; i++ ){
   	  		cout << "main() : creating thread, " << i << endl;
     		rc = pthread_create(&threads[i], NULL,computeMatches, (void *)i);
