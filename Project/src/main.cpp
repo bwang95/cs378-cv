@@ -25,7 +25,7 @@ void *computeMatches(void *threadid){
 	min = id * NUM_THREADS;
 	max = min + size/NUM_THREADS - 1;
 	cout<<"Thread: "<<id<<endl;
-	if(size % NUM_THREADS =! 0 && id == (NUM_THREADS-1))
+	if(size % NUM_THREADS != 0 && id == (NUM_THREADS-1))
 		max = size-1;
 	FeatureMatcher matcher(path, dir.list[min].c_str());
 	for (int i = min + 1; i < max; i++) 
