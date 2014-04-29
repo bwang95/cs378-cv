@@ -7,8 +7,6 @@ using namespace std;
 struct ImageData{
 	string path;
 	int goodmatches;
-	int min_num;
-//	FeatureMatcher matched;
 };
 
 int main(int argc, char **argv) {
@@ -18,12 +16,11 @@ int main(int argc, char **argv) {
 	ImageData temp;
 	int TOP_NUM = 4;
 
-	if (argc < 3) { //if not enough arguments
-		cout << "Project <img> <directory> (optional: downsize)" << endl;
+	if (argc < 2) { //if not enough arguments
+		cout << "Project <img> (optional:directory)" << endl;
 		return 1;
 	}
 
-	//Directory dir(argv[2]);
 	Direct dir;
 	if (dir.getSize() == 0)
 		cout << "Directory not found or empty" << endl;
@@ -41,15 +38,11 @@ int main(int argc, char **argv) {
 					matcher.setDownsize(atoi(argv[3]));
 
 				temp.path = dir.list[i];
-//				temp.matched = matcher;
 				temp.goodmatches = matcher.drawFeatures(false);  //set to false to not draw
-				temp.min_num = matcher.getMinNum();
 				//cout << temp.goodmatches << " matches" << endl;
 
 				//Top matches algorithm
 				vector<ImageData>::iterator it;
-				if(temp.min_num>0)
-						definiteImages.push_back(temp);
 
 				if(topImages.size() == 0)
 					topImages.push_back(temp);
@@ -86,23 +79,6 @@ int main(int argc, char **argv) {
 			matcher.drawFeatures(true);
 			waitKey(0);
 		}
-
-		cout << "\n\n Matches with minimum distances. (Accurate points)" <<endl;
-		for(int i = 0;i<definiteImages.size();i++)
-		{
-			cout<<"Number of Min Matches: "<< definiteImages[i].min_num<<endl;
-			cout<<"File Name: " << definiteImages[i].path<<endl<<endl;
-
-			FeatureMatcher matcher(argv[1], definiteImages[i].path.c_str());
-			matcher.drawFeatures(true);
-			waitKey(0);
-		}
-
-		// // cout << "\n\nMost Matches: " << max << endl;
-		// // cout << "File name: " << maxImg << endl;
-		// // FeatureMatcher matcher(argv[1], maxImg.c_str());
-		// matcher.drawFeatures(true, false);
-		// delete matcher;
 	}
 	waitKey(0);
 	return 0;

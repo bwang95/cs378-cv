@@ -16,8 +16,7 @@ using namespace cv;
 FeatureMatcher::FeatureMatcher(const char *img1, const char *img2):
 	img_1(imread(img1, CV_LOAD_IMAGE_GRAYSCALE)),
 	img_2(imread(img2, CV_LOAD_IMAGE_GRAYSCALE)),
-	downsize(3),
-	min_num(0) {
+	downsize(3) {
 	if ( !img_1.data || !img_2.data ) {
 		std::cout << " --(!) Error reading images " << std::endl;
 		return;
@@ -49,9 +48,6 @@ void FeatureMatcher::setCompareImage(const char *name){
 }
 
 vector<DMatch> FeatureMatcher::matchFeatures() {
-	// //Make sure run() is called first...
-	// run();
-
 	//-- Step 3: Matching descriptor vectors using FLANN matcher
 	FlannBasedMatcher matcher;
 	std::vector< DMatch > matches;
@@ -67,19 +63,10 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 		if ( dist > max_dist ) max_dist = dist;
 	}
 
-	// printf("-- Max dist : %f \n", max_dist );
-	// printf("-- Min dist : %f \n", min_dist );
-
-	//-- Draw only "good" matches (i.e. whose distance is less than 2*min_dist,
-	//-- or a small arbitary value ( 0.02 ) in the event that min_dist is very
-	//-- small)
-	//-- PS.- radiusMatch can also be used here.
 	std::vector< DMatch > good_matches;
 
 	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
-		if (matches[i].distance <= max(min_dist, 0.02))
-			++min_num;
-		if ( matches[i].distance <= max(2* min_dist, 0.02) ) {
+		if ( matches[i].distance <= max(1.6* min_dist, 0.02) ) {
 			good_matches.push_back(matches[i]);
 		}
 	}
@@ -99,7 +86,6 @@ int FeatureMatcher::drawFeatures(bool draw) {
 	if (draw)               // Draws if true
 		imshow( "Good Matches", img_matches );
 
-	// if (print)
 	// 	for ( int i = 0; i < good_matches.size(); i++ )
 	// 		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d  \n", i, good_matches[i].queryIdx, good_matches[i].trainIdx );
 	return good_matches.size();
