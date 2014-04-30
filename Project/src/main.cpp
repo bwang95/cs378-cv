@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <pthread.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -13,6 +14,8 @@ struct ImageData{
 	int goodmatches;
 };
 
+bool compFunction (ImageData i,ImageData j) {return (i.goodmatches<j.goodmatches);}
+
 vector<ImageData> images;
 Direct dir;
 char *path;
@@ -22,17 +25,17 @@ void *computeMatches(void *threadid){
 	long id = (long) threadid;
 	int min,max,size,diff;
 	size = dir.getSize(); 	
-	min = id * NUM_THREADS;
+	min = id * size/NUM_THREADS - 1;
 	max = min + size/NUM_THREADS - 1;
 	cout<<"Thread: "<<id<<endl;
-	if(size % NUM_THREADS != 0 && id == (NUM_THREADS-1))
+	if(id == (NUM_THREADS-1))
 		max = size-1;
+	cout<<"max: "<<max<<"\t min: "<<min<<endl;
 	FeatureMatcher matcher(path, dir.list[min].c_str());
 	for (int i = min + 1; i < max; i++) 
 	{
 		//cout << "Comparing " << argv[1] << " and " << dir.list[i] << " #" << i + 1 << endl;
 		matcher.setCompareImage(dir.list[i].c_str());
-
 		temp.path = dir.list[i];
 		temp.goodmatches = matcher.drawFeatures(false);  //set to false to not draw
 		images.push_back(temp);
@@ -67,19 +70,26 @@ int main(int argc, char **argv) {
     		}
    		}
 
-   		pthread_exit(NULL);
+   	for(int i = 0;i<NUM_THREADS;i++)
+   		pthread_join(threads[i], NULL);
 
-		// cout << "\n\n Top Matches" <<endl;
-		// for(int i = 0;i<topImages.size();i++)
-		// {
-		// 	cout<<"Number of Matches: "<< topImages[i].goodmatches<<endl;
-		// 	cout<<"File Name: " << topImages[i].path<<endl<<endl;
-
-		// 	FeatureMatcher matcher(argv[1], topImages[i].path.c_str());
-		// 	matcher.drawFeatures(true);
-		// 	waitKey(0);
-		// }
+	for(int i = 0;i<dir.getSize();i++)
+	{
+		 cout<<images[i].goodmatches<<endl;
+		 cout<<images[i].path<<endl;
 	}
+
+	// std::sort(images.begin(),images.end(),compFunction);
+	// int l;
+	// for(int i = 0;i<TOP_NUM;i++)
+	// {
+	// 	l = images.size()-i-1;
+	// 	cout<<images[l].goodmatches<<endl;
+	// 	cout<<images[l].path<<endl;
+	// }
+}
+
+	pthread_exit(NULL);
 	waitKey(0);
 	return 0;
 }
