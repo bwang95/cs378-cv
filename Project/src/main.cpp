@@ -76,20 +76,14 @@ int main(int argc, char **argv) {
    	for(int i = 0;i<NUM_THREADS;i++)
    		pthread_join(threads[i], NULL);
 
-	for(int i = 0;i<dir.getSize()-1;i++)
+	std::sort(images.begin(),images.end(),compFunction);
+	int l;
+	for(int i = 0;i<TOP_NUM;i++)
 	{
-		 cout<<images[i].goodmatches<<endl;
-		 cout<<images[i].path<<endl;
+		l = images.size()-i-1;
+		cout<<images[l].goodmatches<<endl;
+		cout<<images[l].path<<endl;
 	}
-
-	// std::sort(images.begin(),images.end(),compFunction);
-	// int l;
-	// for(int i = 0;i<TOP_NUM;i++)
-	// {
-	// 	l = images.size()-i-1;
-	// 	cout<<images[l].goodmatches<<endl;
-	// 	cout<<images[l].path<<endl;
-	// }
 }
 
 	pthread_exit(NULL);
