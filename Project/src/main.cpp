@@ -107,22 +107,23 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	if (dir.getSize() == 0)
+	if (dir.getSize() == 0){
 		cout << "Directory not found or empty" << endl;
-	else 
-	{	
-		cout << "Computing matches."<<endl;
+		return 1;
+	}
+	
+	cout << "Computing matches."<<endl;
 		
-		pthread_t threads[NUM_THREADS];
-   		pthread_t rc;
-   		for(int i=0; i < NUM_THREADS; i++ ){
-  	  		//cout << "main() : creating thread, " << i << endl;
-    		rc = pthread_create(&threads[i], NULL,computeMatches, (void *)i);
-      		if (rc){
-        		cout << "Error:unable to create thread," << rc << endl;
+	pthread_t threads[NUM_THREADS];
+   	pthread_t rc;
+   	for(int i=0; i < NUM_THREADS; i++ ){
+  		//cout << "main() : creating thread, " << i << endl;
+    	rc = pthread_create(&threads[i], NULL,computeMatches, (void *)i);
+    	if (rc){
+       		cout << "Error:unable to create thread," << rc << endl;
      		exit(-1);
     		}
-   		}
+   	}
 
    	for(int i = 0;i<NUM_THREADS;i++)
    		pthread_join(threads[i], NULL);
@@ -143,7 +144,6 @@ int main(int argc, char **argv) {
 	}
 	
 	cout<< "The Top Vote is : " << TopVote(TOP)<<endl;
-}
 
 	//pthread_exit(NULL);
 	return 0;
