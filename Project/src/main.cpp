@@ -8,7 +8,7 @@
 using namespace std;
 
 #define NUM_THREADS 4	//defines the number of threads used in the program
-#define TOP_NUM 4	//defines the top results produced at the end
+#define TOP_NUM 5	//defines the top results produced at the end
 
 struct ImageData{	//stores image data
 	string path;
