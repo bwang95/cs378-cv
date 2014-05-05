@@ -20,6 +20,11 @@ vector<ImageData> images;
 Direct dir;
 char *path;
 
+//returns the most common directory
+string TopVote(string list[]){
+	return "blah";
+}
+
 void *computeMatches(void *threadid){
 	ImageData temp;
 	long id = (long) threadid;
@@ -76,17 +81,22 @@ int main(int argc, char **argv) {
    	for(int i = 0;i<NUM_THREADS;i++)
    		pthread_join(threads[i], NULL);
 
+	//Sorting and Ranking 
+   	string TOP[TOP_NUM];
 	std::sort(images.begin(),images.end(),compFunction);
 	int l;
 	for(int i = 0;i<TOP_NUM;i++)
 	{
 		l = images.size()-i-1;
-		cout<<images[l].goodmatches<<endl;
-		cout<<images[l].path<<endl;
+		FeatureMatcher matcher(path, images[l].path.c_str());
+		matcher.drawFeatures(true);
+		waitKey(0);
+		TOP[i] = images[l].path<<endl;
+		cout<<"#"<<i+1<<" "<<images[l].path<<endl;
+		cout<<"GoodMatches: "<<images[l].goodmatches<<endl;
 	}
 }
 
-	pthread_exit(NULL);
-	waitKey(0);
+	//pthread_exit(NULL);
 	return 0;
 }
