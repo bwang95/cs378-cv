@@ -7,24 +7,71 @@
 
 using namespace std;
 
-#define NUM_THREADS 4
+#define NUM_THREADS 4	//defines the number of threads used in the program
+#define TOP_NUM 4	//defines the top results produced at the end
 
-struct ImageData{
+struct ImageData{	//stores image data
 	string path;
 	int goodmatches;
 };
 
-bool compFunction (ImageData i,ImageData j) {return (i.goodmatches<j.goodmatches);}
+bool compFunction (ImageData i,ImageData j) {return (i.goodmatches<j.goodmatches);}	//comparator function for sort
 
 vector<ImageData> images;
 Direct dir;
 char *path;
 
-//returns the most common directory
-string TopVote(string list[]){
-	return "blah";
+int find(string str,string list[]){	//finds a string in an string array
+	for(int i = 0;i<TOP_NUM;i++)
+		if(list[i] == str)
+			return i;
+	return -1;
 }
 
+//returns the most common directory
+string TopVote(string list[]){
+	string paths[TOP_NUM];
+	int pathcounts[TOP_NUM];
+	int found,currentIndex = 0;
+	string temp;
+
+	for(int i = 0;i<TOP_NUM;i++){ 	//initializing arrays
+		paths[i] = "";
+		pathcounts[i] = 0;
+	}
+
+	for(int i = 0;i<TOP_NUM;i++){	//creates string count
+		temp = list[i];
+		found = temp.find_last_of("/\\");
+		temp = temp.substr(0,found);		//splits paths from file
+		found = find(temp,paths);
+		if(found >= 0)
+			pathcounts[found]++;
+		else
+		{
+			paths[currentIndex] = temp;
+			pathcounts[currentIndex]++;
+			currentIndex++;
+		}
+	}
+	//Uncomment below to debug TOPVOTE
+	// for(int i = 0;i<TOP_NUM;i++){ 	
+	// 	cout<<paths[i]<<"\t"<<pathcounts[i]<<endl;
+	// }
+	// cout<<endl;
+
+	int max = -1;
+	for(int i = 0;i < currentIndex;i++)	//finds max in array
+		if(max<pathcounts[i])
+		{
+			max = pathcounts[i];
+			temp = paths[i];
+		}
+	
+	return temp;	
+}
+
+//pthread function 
 void *computeMatches(void *threadid){
 	ImageData temp;
 	long id = (long) threadid;
@@ -54,7 +101,6 @@ void *computeMatches(void *threadid){
 
 int main(int argc, char **argv) {
 
-	int TOP_NUM = 4;	//limit the # of top results
 	path = argv[1];
 	if (argc < 2) { //if not enough arguments
 		cout << "Project <img> (optional:directory)" << endl;
@@ -91,11 +137,14 @@ int main(int argc, char **argv) {
 		FeatureMatcher matcher(path, images[l].path.c_str());
 		matcher.drawFeatures(true);
 		waitKey(0);
-		TOP[i] = images[l].path<<endl;
+		TOP[i] = images[l].path;
 		cout<<"#"<<i+1<<" "<<images[l].path<<endl;
 		cout<<"GoodMatches: "<<images[l].goodmatches<<endl;
 	}
+	
+	cout<< "The Top Vote is : " << TopVote(TOP)<<endl;
 }
+
 
 	//pthread_exit(NULL);
 	return 0;
