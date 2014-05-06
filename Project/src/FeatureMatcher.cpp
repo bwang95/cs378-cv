@@ -25,6 +25,7 @@ FeatureMatcher::FeatureMatcher(const char *img1, const char *img2):
 	data_2 = new FeatureMatcherData(&img_2);
 
 	run();
+	data_2->readNext();
 }
 
 FeatureMatcher::~FeatureMatcher() {
@@ -38,13 +39,14 @@ void FeatureMatcher::setDownsize(int downsize) {
 
 int FeatureMatcher::run() {
 	data_1 -> run(downsize);
-	data_2 -> run(downsize);
+	//data_2 -> run(downsize);
 }
 
-void FeatureMatcher::setCompareImage(const char *name){
-	img_2 = imread(name, CV_LOAD_IMAGE_GRAYSCALE);
-	data_2 -> setImg(&img_2);
-	data_2 -> run(downsize);
+void FeatureMatcher::Next(){
+	//img_2 = imread(name, CV_LOAD_IMAGE_GRAYSCALE);
+	data_2 -> readNext();
+	//data_2 -> setImg(&img_2);
+	//data_2 -> run(downsize);
 }
 
 vector<DMatch> FeatureMatcher::matchFeatures() {
@@ -54,13 +56,12 @@ vector<DMatch> FeatureMatcher::matchFeatures() {
 	matcher.match( data_1 -> descriptors, data_2 -> descriptors, matches );
 
 
-	double max_dist = 0; double min_dist = 100;
+	double min_dist = 100;
 
 	//-- Quick calculation of max and min distances between keypoints
 	for ( int i = 0; i < data_1 -> descriptors.rows; i++ ) {
 		double dist = matches[i].distance;
 		if ( dist < min_dist ) min_dist = dist;
-		if ( dist > max_dist ) max_dist = dist;
 	}
 
 	std::vector< DMatch > good_matches;

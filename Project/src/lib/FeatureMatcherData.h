@@ -24,6 +24,7 @@ public:
 	// ~FeatureMatcherData();
 	void downsize(int downSize);
 	void calcKeyPoints();
+	void readNext();
 	void calcDescriptors();
 	void run(int downSize = 3);
 	void setImg(Mat *image);

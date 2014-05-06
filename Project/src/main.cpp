@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#define NUM_THREADS 4	//defines the number of threads used in the program
+#define NUM_THREADS 1	//defines the number of threads used in the program
 #define TOP_NUM 5	//defines the top results produced at the end
 
 struct ImageData{	//stores image data
@@ -90,7 +90,7 @@ void *computeMatches(void *threadid){
 	for (int i = min + 1; i <= max; i++) 
 	{
 		//cout << "Comparing " << path << " and " << dir.list[i] << " #" << i << endl;
-		matcher.setCompareImage(dir.list[i].c_str());
+		matcher.Next();
 		temp.path = dir.list[i];
 		temp.goodmatches = matcher.drawFeatures(false);  //set to false to not draw
 		images.push_back(temp);

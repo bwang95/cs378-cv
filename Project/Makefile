@@ -1,4 +1,4 @@
-index: compile runindex clean
+index: compile runindex clean descriptor
 
 descriptor: 
 	./build/Project ImgDB/lab/8.jpg 1

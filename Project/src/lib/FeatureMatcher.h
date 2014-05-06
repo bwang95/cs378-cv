@@ -26,7 +26,7 @@ public:
 	vector<DMatch> matchFeatures();
 	int drawFeatures(bool);
 	void setDownsize(int downsize);
-	void setCompareImage(const char *name);
+	void Next();
 };
 
 #endif //FEATURE_MATCH_H

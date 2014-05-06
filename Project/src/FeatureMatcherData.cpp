@@ -9,6 +9,7 @@
 #include "opencv2/features2d/features2d.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/nonfree/features2d.hpp"
+#include "opencv2/opencv.hpp"
 
 FeatureMatcherData::FeatureMatcherData(Mat *image):
 	img(image), descriptors(), keypoints() {}
@@ -32,6 +33,14 @@ void FeatureMatcherData::calcKeyPoints() {
 
 void FeatureMatcherData::setImg(Mat *image){
 	img = image;
+}
+
+FileStorage fs2("dbDescriptors.yml", FileStorage::READ);
+
+void FeatureMatcherData::readNext(){
+	string path;
+	fs2["Path"] >> path;
+	fs2["Descriptor"] >> descriptors;
 }
 
 void FeatureMatcherData::calcDescriptors() {
