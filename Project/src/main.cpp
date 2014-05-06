@@ -103,7 +103,7 @@ int main(int argc, char **argv) {
 
 	path = argv[1];
 	if (argc < 2) { //if not enough arguments
-		cout << "Project <img> (optional:directory)" << endl;
+		cout << "Project <img> (optional:1)" << endl;
 		return 1;
 	}
 
@@ -111,6 +111,17 @@ int main(int argc, char **argv) {
 		cout << "Directory not found or empty" << endl;
 		return 1;
 	}
+
+	if(argc == 3)
+		if(atoi(argv[2]) == 1)
+		{
+			cout<<"Resaving Database Descriptors. "<<endl;
+			dbDescriptors de;
+			cout<<"Done"<<endl;
+			return 0;
+		}
+
+
 	
 	cout << "Computing matches."<<endl;
 		

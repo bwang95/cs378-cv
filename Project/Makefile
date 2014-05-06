@@ -1,5 +1,8 @@
 index: compile runindex clean
 
+descriptor: 
+	./build/Project ImgDB/lab/8.jpg 1
+
 compile:
 	javac FileIndexer.java
 
@@ -18,4 +21,5 @@ rebuild:
 
 test: rebuild run
 
-remake: index test
+remake: 
+	index test
