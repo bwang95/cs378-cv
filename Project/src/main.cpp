@@ -68,7 +68,7 @@ string TopVote(string list[]){
 			temp = paths[i];
 		}
 	
-	return temp;	
+	return temp.substr(temp.find_last_of("/\\")+1,temp.length() -1);	
 }
 
 //pthread function 
