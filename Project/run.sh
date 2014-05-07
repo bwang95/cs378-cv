@@ -1,1 +1,1 @@
-./build/Project ImgDB/PHONEDB/31.jpg
+./build/Project ../../testDB/20140507_142431.jpg

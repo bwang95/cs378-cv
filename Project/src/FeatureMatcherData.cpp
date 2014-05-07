@@ -15,8 +15,19 @@ FeatureMatcherData::FeatureMatcherData(Mat *image):
 
 void FeatureMatcherData::downsize(int downSize) {
 	Mat tmp = *img;
+	int downsize = downSize;
+	// long pxls = tmp.rows * tmp.cols;
+	// cout<<pxls<<endl;
+	// if(pxls >= 12000000)
+	// 	downsize = 3;
+	// else
+	// if(pxls >= 8000000)
+	// 	downsize = 2;
+	// else
+	// 	return;
+
 	Mat dst;
-	for (int i = 0; i < downSize; i++) {
+	for (int i = 0; i < downsize; i++) {
 		pyrDown(tmp, dst, Size(tmp.cols / 2, tmp.rows / 2));
 		tmp = dst;
 	}
