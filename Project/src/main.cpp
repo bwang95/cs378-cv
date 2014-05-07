@@ -135,12 +135,13 @@ int main(int argc, char **argv) {
 	for(int i = 0;i<TOP_NUM;i++)
 	{
 		l = images.size()-i-1;
-		FeatureMatcher matcher(path, images[l].path.c_str());
-		matcher.drawFeatures(true);
-		waitKey(0);
+		//cout<<"#"<<i+1<<" "<<images[l].path<<endl;
+		//cout<<"GoodMatches: "<<images[l].goodmatches<<endl;
+		//FeatureMatcher matcher(path, images[l].path.c_str());
+		//matcher.drawFeatures(false);
+		//waitKey(0);
 		TOP[i] = images[l].path;
-		cout<<"#"<<i+1<<" "<<images[l].path<<endl;
-		cout<<"GoodMatches: "<<images[l].goodmatches<<endl;
+		
 	}
 	
 	cout<< "The Top Vote is : " << TopVote(TOP)<<endl;
